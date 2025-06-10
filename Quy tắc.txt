@@ -1,0 +1,15 @@
+-Đem repo về máy:
+Chạy lần lượt 2 lệnh dưới:
+git clone https://github.com/d3nhatv0lam/Full-Service-Event-Planning.git
+cd "Full-Service-Event-Planning"
+
+Cập nhật các thay đổi của repo (Nên làm thường xuyên tránh xung đột):
+git pull origin main
+
+Đẩy code lên repo:
+git add .
+git commit -m "<comment>"
+git push origin main
+
+
+
