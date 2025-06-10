@@ -1,0 +1,35 @@
+/* 
+File gộp để sau này gom hết CSS vào 1 file này duy nhất
+Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng thể, css cho header...
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.text-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.primary-color {
+    color: #ff6b6b;
+}
+
+.secondary-color {
+    color: #4a4a4a;
+}
+
+.third-color {
+    color: #f7f7f7;
+}
+
+.fourth-color {
+    color: #333;
+}
