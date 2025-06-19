@@ -4,32 +4,23 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --color-1: #333333;
+    --color-2: #4a4a4a;
+    --color-3: #f7f7f7;
+    --title-font: 'Poppins', sans-serif;
+    --text-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     width: 100%;
-    margin: 0 auto;
-}
-
-.title-font {
-    font-family: 'Poppins', sans-serif;
+    
 }
 
 
-.text-font {
-    font-family: 'Poppins', sans-serif;
-}
-
-.primary-color {
-    color: #ff6b6b;
-}
-
-.secondary-color {
-    color: #4a4a4a;
-}
-
-.third-color {
-    color: #f7f7f7;
-}
-
-.fourth-color {
-    color: #333;
-}
