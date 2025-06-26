@@ -2,25 +2,25 @@
 File gộp để sau này gom hết CSS vào 1 file này duy nhất
 Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng thể, css cho header...
 */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 
 :root {
     --color-1: #333333;
     --color-2: #4a4a4a;
     --color-3: #f7f7f7;
-    --title-font: 'Poppins', sans-serif;
-    --text-font: 'Poppins', sans-serif;
+    --color-4: ;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     width: 100%;
-    
 }
 
 
