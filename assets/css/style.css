@@ -6,10 +6,10 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 
 
 :root {
-    --color-1: #333333;
-    --color-2: #4a4a4a;
-    --color-3: #f7f7f7;
-    --color-4: ;
+    --color-1: #5810BE;
+    --color-2: #4FD5C8;
+    --color-3: #000000;
+    --color-4: #FDFDF9;
 }
 
 * {
@@ -18,9 +18,63 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.header{
+    height: 9%;
+    width: 100%;
+    background: var(--color-3);
+    position: fixed;
+    z-index: 9999;
+}
+
+.a-icon {
+    display: inline-block;
+    position: relative;
+    top: calc(50% - 15px);
+    left: 10px;
+}
+
+.header-icon {
+    height: 30px;
+}
 
 .container {
+    display: flex;
     width: 100%;
 }
 
+.footer{
+    background: var(--color-3);
+    width: 100%;
+    height: auto;
+    position: relative;
+}
 
+.footer .footer-icon {
+    position: relative;
+    left: calc(50% - 101px);
+}
+
+footer h4 {
+    text-align: center;
+    font-size: 17px;
+    color: var(--color-4);
+    font-weight: 300;
+}
+
+footer h3 {
+    color: var(--color-4);
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    color: var(--color-4);
+}
+
+@media screen(min-width: 768px){
+    
+}
+
+@media screen(min-width: 1024px){
+    
+}
