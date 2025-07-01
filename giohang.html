@@ -16,7 +16,7 @@
 
     <!-- và thêm dòng này -->
     <!-- <link rel="stylesheet" href="./assets/css/style.min.css" type="text/css">    -->
-    <title>EVERMONT | GIỎ HÀNG</title>
+    <title>EVERMONT | Giỏ Hàng</title>
 
 </head>
 
@@ -64,33 +64,43 @@
                         </div>
                             
 
-                        <div div class="item-time">                               
+                        <div class="item-time">                         
                             <label for="time">Thời gian:</label>
-                            <select id="time" name="time">
+                            <div class="item-select-warper">
+                                <select id="time" name="time"></select>
+                                    <span class="item-select-icon">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </span>
+                            </div>
                             
-                            </select>
                         </div>
 
                         <div class="item-date">
+                            <label>Ngày</label>
                             <div>
-                                <label for="day">Ngày</label>
-                                <select id="day" name="day">
-                                    <option value="8h-11h30">8h - 11h30</option>
-                                    <option value="14h-21h">14h - 21h</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="day">Ngày</label>
-                                <select id="day" name="day">
-                                    <option value="8h-11h30">8h - 11h30</option>
-                                    <option value="14h-21h">14h - 21h</option>
-                                </select>
+                                <div class="item-select-warper">
+                                    <select name="day" class="booking-day"> </select>
+                                    <span class="item-select-icon">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </span>
+                                </div>
+                                <div class="item-select-warper">
+                                    <select name="month" class="booking-month">
+                                        <option value="8h-11h30">8h - 11h30</option>
+                                        <option value="14h-21h">14h - 21h</option>
+                                    </select>
+                                     <span class="item-select-icon">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
-                            <p class="item-price">Giá: 1.000.000đ</p>
-                        <button class="item-remove clickable">X</button>
+                        <p class="item-price">Giá: 1.000.000đ</p>
+                        <div class="item-button">
+                            <button class="clickable btn-remove">Hủy</button>
+                            <button class="clickable btn-buy">Đặt</button>
+                        </div>
                     </form>
                 </li>
 

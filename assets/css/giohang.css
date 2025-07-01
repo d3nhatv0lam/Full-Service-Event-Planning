@@ -14,7 +14,7 @@
 
 .giohang-list {
     width: 100%;
-    padding: 10px;
+    padding: 10px 20px;
     gap: 10px;
 }
 
@@ -33,7 +33,6 @@
 
 .giohang-item .booking-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "img img"
         "info info"
@@ -43,12 +42,18 @@
         "price button";
 }
 
-.booking-item div {
+.booking-item > div {
     width: 100%;
     padding: 10px;
 }
 
+.booking-item label {
+    display: block;
+    font-weight: bold;
+}
+
 .booking-item input {
+    display: block;
     width: 100%;
     padding: 5px;
     border: 1px solid var(--color-3);
@@ -78,11 +83,87 @@
 
 .booking-item .item-time {
     grid-area: time;
+    display: flex;
+    flex-direction: column;
 }
 
-.booking-item .item-date {
-    grid-area: date;
+
+.booking-item .item-date > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    column-gap: 10px;
+}
+
+.booking-item .item-select-warper {
+    position: relative;
+    width: 100%;
+}
+
+.booking-item .item-select-warper .item-select-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.booking-item select:focus + .item-select-icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.booking-item .item-address input,
+.booking-item .item-date select,
+.booking-item .item-time select{
+    appearance: none;
+    border: none;
+    width: 100%;
+    margin: 5px 0px;
+    padding: 10px 10px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}
+
+.booking-item .item-price {
+    grid-area: price;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.booking-item .item-button {
+    grid-area: button;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 15px;
+    padding: 0px 20px;
+    padding-bottom: 10px;
+}
+
+.booking-item .item-button > button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-3);
+    color: white;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.item-button > button.btn-remove {
+    background-color: red;
+}
+.item-button > button.btn-remove:hover {
+    background-color: darkred;
+}
+
+.booking-item .item-button > button.btn-buy {
+    background-color: rgb(40, 233, 40);
+}
+
+.booking-item .item-button > button.btn-buy:hover {
+    background-color: green;
 }
