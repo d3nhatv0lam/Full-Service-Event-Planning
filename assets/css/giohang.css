@@ -33,6 +33,7 @@
 
 .giohang-item .booking-item {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "img img"
         "info info"
