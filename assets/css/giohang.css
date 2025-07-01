@@ -45,7 +45,7 @@
 
 .booking-item > div {
     width: 100%;
-    padding: 10px;
+    padding: 0px 5px;
 }
 
 .booking-item label {
@@ -84,16 +84,23 @@
 
 .booking-item .item-time {
     grid-area: time;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 
-.booking-item .item-date > div {
+.booking-item .item-date {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     column-gap: 10px;
+}
+
+.booking-item .item-date > div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 
 .booking-item .item-select-warper {
@@ -121,10 +128,12 @@
     border: none;
     width: 100%;
     margin: 5px 0px;
-    padding: 10px 10px;
+    padding: 10px 5px;
     background-color: #EEEEEE;
     border-radius: 5px;
 }
+
+
 
 .booking-item .item-price {
     grid-area: price;
@@ -139,13 +148,13 @@
     display: flex;
     width: 100%;
     justify-content: right;
-    gap: 15px;
-    padding: 0px 20px;
+    gap: 10px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .booking-item .item-button > button {
-    padding: 10px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: none;
     background-color: var(--color-3);
