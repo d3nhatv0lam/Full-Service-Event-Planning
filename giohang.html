@@ -12,11 +12,11 @@
     <!-- Khi gộp sẽ xóa 2 dòng này đi  -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <!-- Copy nhớ đổi tên file CSS -->
-    <link rel="stylesheet" href="./assets/css/trangchu.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/giohang.css" type="text/css">
 
     <!-- và thêm dòng này -->
     <!-- <link rel="stylesheet" href="./assets/css/style.min.css" type="text/css">    -->
-    <title>EVERMONT | Trang Chủ</title>
+    <title>EVERMONT | GIỎ HÀNG</title>
 
 </head>
 
@@ -46,7 +46,59 @@
 
     <main>
         <div id="giohang" class="container">
-           
+            <h2>Giỏ hàng của bạn</h2>
+
+            <ul class="giohang-list">
+                <li class="giohang-item">
+                    <form class="booking-item">
+                        <img class="item-img" src="assets/images/img-placeholder.svg" alt="placeholder">
+
+                        <div class="item-info">
+                            <h3 class="item-name">Tên sản phẩm</h3>
+                            <p class="item-rank">Gói: Bạc</p>
+                        </div>
+
+                        <div class="item-address">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" id="address" name="address" >
+                        </div>
+                            
+
+                        <div div class="item-time">                               
+                            <label for="time">Thời gian:</label>
+                            <select id="time" name="time">
+                            
+                            </select>
+                        </div>
+
+                        <div class="item-date">
+                            <div>
+                                <label for="day">Ngày</label>
+                                <select id="day" name="day">
+                                    <option value="8h-11h30">8h - 11h30</option>
+                                    <option value="14h-21h">14h - 21h</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="day">Ngày</label>
+                                <select id="day" name="day">
+                                    <option value="8h-11h30">8h - 11h30</option>
+                                    <option value="14h-21h">14h - 21h</option>
+                                </select>
+                            </div>
+                        </div>
+
+                            <p class="item-price">Giá: 1.000.000đ</p>
+                        <button class="item-remove clickable">X</button>
+                    </form>
+                </li>
+
+                <li class="giohang-item">
+
+                    
+                </li>
+            </ul>
         </div>
     </main>
 
@@ -91,6 +143,7 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/giohang.js"></script>
 </body>
 
 </html>

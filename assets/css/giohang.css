@@ -1,0 +1,88 @@
+
+#giohang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#giohang > h2 {
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    color: var(--color-3);
+}
+
+.giohang-list {
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.giohang-list > li {
+    margin: 5px 0px 10px 0px;
+}
+
+.giohang-item {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.giohang-item .booking-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "img img"
+        "info info"
+        "address address"
+        "time date"
+        "request request"
+        "price button";
+}
+
+.booking-item div {
+    width: 100%;
+    padding: 10px;
+}
+
+.booking-item input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--color-3);
+    border-radius: 5px;
+}
+
+.booking-item .item-img {
+    grid-area: img;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.booking-item  .item-info {
+    grid-area: info;
+    text-align: center;
+}
+
+.item-info > h3.item-name, p.item-rank {
+    margin: auto;
+}
+
+.booking-item .item-address {
+    grid-area: address;
+}
+
+.booking-item .item-time {
+    grid-area: time;
+}
+
+.booking-item .item-date {
+    grid-area: date;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
