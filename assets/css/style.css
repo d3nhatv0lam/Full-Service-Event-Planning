@@ -18,7 +18,14 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
 .header{
+    display: flex;
+    flex-direction: row;
     height: 60px;
     width: 100%;
     background: var(--color-3);
@@ -29,13 +36,67 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 .a-icon {
     display: inline-block;
     position: relative;
-    top: calc(50% - 15px);
-    left: 10px;
+    /* top: calc(50% - 15px);
+    left: 10px; */
+    margin: auto 0px;
+}
+
+.padding {
+    padding: 0px 30px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
 }
 
 .header-icon {
     height: 30px;
 }
+
+.moblie-nav {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.header .moblie-nav .button > i {
+    font-size: 30px;
+    color: var(--color-4);
+    text-align: center;
+}
+
+
+.nav-warp {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    background-color: var(--color-2);
+    gap: 10px;
+    padding: 10px 2px;
+}
+
+.show {
+    display: flex;
+}
+
+.nav-warp a {
+    height: 45px;
+    padding: 10px 10px;
+    align-content: center;
+    text-decoration: none;
+}
+
+
 
 .container {
     display: flex;
@@ -52,6 +113,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     width: 100%;
     height: auto;
     gap: 10px;
+    padding: 10px 0px;
 }
 
 .footer .footer-icon {
@@ -112,5 +174,17 @@ footer p {
 }
 
 @media screen and (min-width: 1024px){
-    
+    .nav-warp {
+        position:static;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        gap: 20px;
+    }
+
+    .moblie-nav {
+        display: none;
+    }
 }
