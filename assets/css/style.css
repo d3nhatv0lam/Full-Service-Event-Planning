@@ -18,28 +18,25 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.header{
-    height: 9%;
+
+.header-container {
     width: 100%;
     background: var(--color-3);
-    position: fixed;
-    z-index: 9999;
 }
 
-.a-icon {
-    display: inline-block;
-    position: relative;
-    top: calc(50% - 15px);
-    left: 10px;
+.header-container .inner-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8px;
 }
 
-.header-icon {
+.header-container .inner-logo img {
     height: 30px;
 }
 
-.container {
-    display: flex;
-    width: 100%;
+.header-container .inner-menu ul{
+    display: none;
 }
 
 .footer{
@@ -71,10 +68,14 @@ footer p {
     color: var(--color-4);
 }
 
-@media screen(min-width: 768px){
+
+@media screen and (min-width: 768px){
     
 }
 
-@media screen(min-width: 1024px){
-    
+@media screen and (min-width: 1024px){
+    .header-container .inner-menu ul{
+        display: flex;
+        list-style-type: none;
+    }
 }
