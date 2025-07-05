@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+:root {
+    --color-1: #5810BE;
+    --color-2: #4FD5C8;
+    --color-3: #0C0C0C;
+    --color-4: #FDFDF9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+}
+/* ------------SECTION 1: COVER TRANG CHỦ------------ */
+.trangchu-cover {
+    background: gray;
+    height: 200px;
+}
+
+.layer-img {
+    height: 30px;
+}
+
+.a-learnmore{
+    text-decoration: none;
+}
+
+.learnmore-btn {
+    width: 90px;
+    height: 20px;
+    font-size: 8.5px;
+    background: var(--color-1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-4);
+    padding: auto auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* ------------SECTION 2: TÓM TẮT VỀ CÔNG TY------------ */
+
+.trangchu-summary {
+    background: #FDFDF9;
+    height: 315px
+}
+
+.a-aboutus{
+    text-decoration: none;
+}
+
+.aboutus-btn {
+    width: 90px;
+    height: 20px;
+    font-size: 8.5px;
+    background: var(--color-1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-4);
+    padding: auto auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* ------------SECTION 3: PHÂN LOẠI SỰ KIỆN------------ */
+.trangchu-category {
+    background: gray;
+    height: 320px;
+}
+
+.a-contactus{
+    text-decoration: none;
+}
+
+.contactus-btn {
+    width: 90px;
+    height: 20px;
+    font-size: 8.5px;
+    background: var(--color-1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-4);
+    padding: auto auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* ------------SECTION 4: SỰ KIỆN NỔI BẬT------------ */
+.trangchu-outstand {
+    background: #FDFDF9;
+    height: 320px;
+}
+
+/* ------------SECTION 5: REVIEW CỦA KHÁCH HÀNG------------ */
+.trangchu-customer-review {
+    background: gray;
+    height: 310px;
+}

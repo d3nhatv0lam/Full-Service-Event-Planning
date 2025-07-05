@@ -20,6 +20,8 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     font-family: 'Montserrat', sans-serif;
 }
 
+/* ------------------HEADER FORMATING--------------------- */
+
 .header-container {
     width: 100%;
     background: var(--color-3);
@@ -40,6 +42,19 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     display: none;
 }
 
+.fa-cart-shopping{
+    color: var(--color-4);
+    font-size: 22px;
+}
+
+.fa-bars{
+    color: var(--color-4);
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+/* --------------------FOOTER FORMATING------------------------ */
+
 .footer{
     background: var(--color-3);
     width: 100%;
@@ -51,7 +66,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     position: relative;
     left: calc(50% - 101px);
 }
-z
+
 footer h4 {
     text-align: center;
     font-size: 17px;
