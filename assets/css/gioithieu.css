@@ -3,11 +3,69 @@
 :root {
     --color-1: #5810BE;
     --color-2: #4FD5C8;
-    --color-3: #000000;
+    --color-3: #0C0C0C;
     --color-4: #FDFDF9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .gioithieu-container {
     background-color: var(--color-3);
+    padding: 0px 20px;
+}
+
+#gt-h1 {
+    color: var(--color-2);
+    text-align: center;
+    font-size: 40px;
+}
+
+.gt-p {
+    color: var(--color-4);
+    text-align: center;
+    font-weight: 100;
+}
+
+#gt-header-img {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.gt-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.gt-img-container img {
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.overlay-text {
+    color: var(--color-4);
+}
+
+.gt-h3 {
+    display: block;
+    margin: 20px 0px;
+    color: var(--color-2);
+    font-size: 20px;
+}
+
+.gt-p1 {
+    color: var(--color-4);
+    font-weight: 100;
+}
+
+.rcm-img {
+    width: 20%;
 }
 
