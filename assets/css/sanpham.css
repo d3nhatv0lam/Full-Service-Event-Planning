@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --color-1: #5810BE;
+    --color-2: #4FD5C8;
+    --color-3: #0C0C0C;
+    --color-4: #FDFDF9;
+}
+
+#sanpham-h1 {
+    color: var(--color-2);
+    background-color: var(--color-3);
+    text-align: center;
+}
