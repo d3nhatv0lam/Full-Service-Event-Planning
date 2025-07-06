@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --color-1: #5810BE;
+    --color-2: #4FD5C8;
+    --color-3: #0C0C0C;
+    --color-4: #FDFDF9;
+}
+
+.sanpham-dichvu {
+    height: 80px;
+    background-color: var(--color-3);
+    /* border: 1px solid white; */
+
+    color: var(--color-2);
+    text-align: center;
+}
+
+.sanpham-dichvu h1 {
+    font-size: 40px;
+    height: 80px;
+    line-height: 80px;
+    /* border: 1px solid red; */
+}
+
+.sanpham-h2 {
+    color: var(--color-1);
+    text-align: center;
+    font-size: 20px;
+}
+
+.sanpham-box {
+    display: block;
+    width: 340px;
+    height: 224px;
+    background-color: var(--color-3);
+}
+
+.sanpham-box img {
+    width: 330px;
+    height: 194px;
+    /* align-content: center; */
+}
