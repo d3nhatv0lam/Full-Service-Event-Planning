@@ -98,6 +98,25 @@
     height: 320px;
 }
 
+.a-consult{
+    text-decoration: none;
+}
+
+.consult-btn {
+    width: 75px;
+    height: 35px;
+    font-size: 11px;
+    line-height: 40px;
+    background: var(--color-2);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--color-4);
+    padding: auto auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
 /* ------------SECTION 5: REVIEW CỦA KHÁCH HÀNG------------ */
 .trangchu-customer-review {
     background: gray;
