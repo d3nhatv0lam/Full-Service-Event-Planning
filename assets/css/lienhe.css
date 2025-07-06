@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --color-1: #5810BE;
+    --color-2: #4FD5C8;
+    --color-3: #0C0C0C;
+    --color-4: #FDFDF9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lh-container1 {
+    background-color: var(--color-3);
+    padding: 0px 20px;
+}
+.lh-h1 {
+    color: var(--color-2);
+    font-size: 40px;
+}
+
+.lh-p1 {
+    color: var(--color-4);
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lh-h2 {
+    color: var(--color-2);
+    font-weight: 100;
+
+}
+
+.lh-map {
+    width: 340px;
+    height: 340px; 
+    border-radius: 5px;
+}
+
+.lh-form-phan-hoi {
+  width: 360px;
+  margin: 40px 20px;
+  font-family: sans-serif;
+}
+
+.lh-form-phan-hoi h2 {
+  color: #4cd3c2;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.lh-form-phan-hoi .phu-de {
+  color: #888;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.lh-form-phan-hoi label {
+  display: block;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: bol;
+}
+
+.lh-form-phan-hoi label span {
+  color: red;
+}
+
+.lh-form-phan-hoi input,
+.lh-form-phan-hoi textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: none;
+}
+
+/*Mở rộng kích thước của khu vực Nội dung */
+.lh-form-phan-hoi textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.lh-form-phan-hoi button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
