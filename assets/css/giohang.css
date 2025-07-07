@@ -69,18 +69,17 @@
 .booking-item .item-img {
     grid-area: img;
     width: 100%;
+    padding: 5px;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
+    border: 1px solid #EEEEEE;
+    
 }
 
 .booking-item  .item-info {
     grid-area: info;
     text-align: center;
-}
-
-.item-info > h3.item-name, p.item-rank {
-    margin: auto;
 }
 
 .booking-item .item-address {
@@ -94,20 +93,70 @@
     flex-direction: column;
 }
 
-
 .booking-item .item-date {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    column-gap: 10px;
-}
-
-.booking-item .item-date > div {
+    grid-area: date;
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
+.booking-item .item-address input,
+.booking-item .item-date input,
+.booking-item .item-time input{
+    appearance: none;
+    border: none;
+    width: 100%;
+    margin: 5px 0px;
+    padding: 10px 5px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}
+
+.booking-item .item-price {
+    grid-area: price;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.booking-item .item-button-container {
+    grid-area: button;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.booking-item .item-button-container > button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-3);
+    color: white;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.item-button-container > button.btn-remove {
+    background-color: red;
+}
+.item-button-container > button.btn-remove:hover {
+    background-color: darkred;
+}
+
+.booking-item .item-button-container > button.btn-buy {
+    background-color: rgb(40, 233, 40);
+}
+
+.booking-item .item-button-container > button.btn-buy:hover {
+    background-color: green;
+}
+
+/* 
+    select animation
 .booking-item .item-select-warper {
     position: relative;
     width: 100%;
@@ -124,61 +173,4 @@
 
 .booking-item select:focus + .item-select-icon {
     transform: translateY(-50%) rotate(180deg);
-}
-
-.booking-item .item-address input,
-.booking-item .item-date select,
-.booking-item .item-time select{
-    appearance: none;
-    border: none;
-    width: 100%;
-    margin: 5px 0px;
-    padding: 10px 5px;
-    background-color: #EEEEEE;
-    border-radius: 5px;
-}
-
-
-
-.booking-item .item-price {
-    grid-area: price;
-    text-align: center;
-    font-weight: bold;
-    margin: auto;
-    padding-bottom: 10px;
-}
-
-.booking-item .item-button {
-    grid-area: button;
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    gap: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.booking-item .item-button > button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--color-3);
-    color: white;
-    cursor: pointer;
-    margin: 0px;
-}
-
-.item-button > button.btn-remove {
-    background-color: red;
-}
-.item-button > button.btn-remove:hover {
-    background-color: darkred;
-}
-
-.booking-item .item-button > button.btn-buy {
-    background-color: rgb(40, 233, 40);
-}
-
-.booking-item .item-button > button.btn-buy:hover {
-    background-color: green;
-}
+} */
