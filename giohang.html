@@ -47,8 +47,7 @@
     <main>
         <div id="giohang" class="container">
             <h2>Giỏ hàng của bạn</h2>
-
-            <ul class="giohang-list">
+            <ul id="giohangList" class="giohang-list">
                 <li class="giohang-item">
                     <form class="booking-item">
                         <img class="item-img" src="assets/images/img-placeholder.svg" alt="placeholder">
@@ -65,19 +64,20 @@
                             
                         <div class="item-time">                         
                             <label>Thời gian:</label>
-                            <div class="item-select-warper">
-                                <select name="time" class="booking-time"></select>
+                            <input type="time" name="time" class="booking-time"></select>
+                            <!-- <div class="item-select-warper">
+                                <input type="time" name="time" class="booking-time"></select>
                                     <span class="item-select-icon">
                                         <i class="fa-solid fa-caret-down"></i>
                                     </span>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="item-date">
                             <div>
                                 <label>Ngày</label>
                                 <div class="item-select-warper">
-                                    <select name="day" class="booking-day"> </select>
+                                    <select id="ngay" name="day" class="booking-day"> </select>
                                     <span class="item-select-icon">
                                         <i class="fa-solid fa-caret-down"></i>
                                     </span>
@@ -87,7 +87,7 @@
                             <div>
                                 <label>Tháng</label>
                                 <div class="item-select-warper">
-                                    <select name="month" class="booking-month">
+                                    <select id="thang" name="month" class="booking-month">
                                        
                                     </select>
                                         <span class="item-select-icon">
@@ -97,7 +97,7 @@
                             </div>
                         </div>
 
-                        <p class="item-price">Giá: 6.000.0000đ</p>
+                        <p class="item-price"> Giá: 6.000.0000đ</p>
                         <div class="item-button">
                             <button class="clickable btn-remove">Hủy</button>
                             <button class="clickable btn-buy">Đặt</button>
