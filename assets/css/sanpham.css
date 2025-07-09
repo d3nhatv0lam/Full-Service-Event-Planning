@@ -28,7 +28,7 @@
     flex-direction: row;
     gap: 10px;
     justify-self: center;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 .package {
@@ -62,4 +62,59 @@
 
 .gold {
   background-color: #FFD700;
+}
+
+.sanpham-list {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.sanpham-list h2 {
+    font-size: 20px;
+    color: #5810BE;
+    text-align: center;
+    padding-bottom: 2.5px;
+}
+
+.sanpham-element {
+    width: 340px;
+    text-align: center;
+    background-color: var(--color-3);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sanpham-element img {
+    width: 330px;
+    height: 194px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.sanpham-element p {
+    color: var(--color-4);
+    font-size: 13px;
+    margin: 0px 5px;
+}
+
+.sanpham-mucgia {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 5px 0px 5px;
+}
+
+.sanpham-goi {
+    width: 105px;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.fa-caret-up {
+    color: var(--color-2);
 }
