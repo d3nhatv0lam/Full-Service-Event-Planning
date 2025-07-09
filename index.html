@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="inner-menu">
-                    <nav>
+                    <nav class="mainnav" id="mainnav">
                         <ul>
                             <li><a href="index.html">TRANG CHỦ</a></li>
                             <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
@@ -44,11 +44,13 @@
                     </nav>
                 </div>
 
-                <div class="inner-shopping-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="inner-toggle-btn">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="inner-header-btn">
+                    <div class="inner-shopping-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="inner-toggle-btn" id="toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -266,6 +268,17 @@
         </div>
     </footer>
 
+    <script>
+        var toggle = document.getElementById("toggle");
+        var mainnav = document.getElementById("mainnav");
+        toggle.onclick = function(){
+            mainnav.classList.toggle('active');
+            document.querySelector('.inner-logo').classList.toggle('hide-when-menu-open');
+            document.querySelector('.inner-shopping-cart').classList.toggle('hide-when-menu-open');
+            document.querySelector('.inner-wrap').classList.toggle('inner-wrap-change');
+            document.querySelector('.inner-header-btn').classList.toggle('inner-header-btn-change');
+        }
+    </script>
 </body>
 
 </html>

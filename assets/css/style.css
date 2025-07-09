@@ -38,10 +38,6 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     height: 30px;
 }
 
-.header-container .inner-menu ul{
-    display: none;
-}
-
 .fa-cart-shopping{
     color: var(--color-4);
     font-size: 22px;
@@ -51,6 +47,36 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     color: var(--color-4);
     font-size: 22px;
     padding: 0 10px;
+}
+
+.inner-toggle-btn {
+    cursor: pointer;
+}
+
+.header-container .inner-menu .mainnav{
+    display: none;
+}
+
+.header-container .inner-menu .mainnav.active{
+    display: flex;
+    justify-content: center;
+}
+
+.hide-when-menu-open{
+    display: none;
+}
+
+.inner-header-btn {
+    display: flex;
+    align-items: center;
+}
+
+.inner-wrap-change {
+    flex-direction: column-reverse;
+}
+
+.inner-header-btn-change {
+    align-self: flex-start;
 }
 
 /* --------------------FOOTER FORMATING------------------------ */
@@ -98,6 +124,9 @@ footer p {
 }
 
 @media screen and (min-width: 1024px){
+    .header-container .inner-menu .mainnav{
+        display: inline-block;
+    }
     .header-container .inner-menu ul{
         display: flex;
         list-style-type: none;
