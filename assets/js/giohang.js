@@ -126,7 +126,7 @@ function loadCartItem() {
     // load gio hang
     DATABASE.cart.forEach(item => {
         // get element from localstorage
-        if (typeof DATABASE.productList[item.productID] === "undefined") return;
+        if (typeof DATABASE.product.list[item.productID] === "undefined") return;
 
 
         var li = document.createElement("li");
