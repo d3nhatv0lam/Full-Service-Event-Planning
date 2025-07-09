@@ -46,19 +46,9 @@
 
 .giohang-item .booking-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "img img"
-        "info info"
-        "address address"
-        "time date"
-        "request request"
-        "price button";
-}
-
-.booking-item > div {
-    width: 100%;
-    padding: 0px 5px;
+        "infomation-container"
+        "input-container";
 }
 
 .booking-item label {
@@ -66,52 +56,65 @@
     font-weight: bold;
 }
 
-.booking-item input {
-    display: block;
-    width: 100%;
-    padding: 5px;
-    border: 1px solid var(--color-3);
-    border-radius: 5px;
+.booking-item > .item-infomation-container 
+{
+    grid-area: infomation-container;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.booking-item .item-img {
-    grid-area: img;
+.item-infomation-container > img {
     width: 100%;
     padding: 5px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid #EEEEEE;
-    
 }
 
-.booking-item  .item-info {
-    grid-area: info;
+.item-infomation-container > div {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 5px;
 }
 
-.booking-item .item-address {
+.booking-item .item-input-container {
+    grid-area: input-container;
+    display: grid;
+    padding: 5px;
+    column-gap: 10px;
+    grid-template-areas: 
+        "address address"
+        "time date"
+        "request request"
+        "price button";
+}
+
+
+.booking-item .item-input-container .item-address {
     grid-area: address;
 }
 
-.booking-item .item-time {
+.booking-item .item-input-container .item-time {
     grid-area: time;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.booking-item .item-date {
+.booking-item .item-input-container .item-date {
     grid-area: date;
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
-.booking-item .item-address input,
-.booking-item .item-date input,
-.booking-item .item-time input,
-.booking-item .item-request textarea {
+.booking-item .item-input-container .item-address input,
+.booking-item .item-input-container .item-date input,
+.booking-item .item-input-container .item-time input,
+.booking-item .item-input-container .item-request textarea {
     appearance: none;
     border: none;
     width: 100%;
@@ -121,29 +124,29 @@
     border-radius: 5px;
 }
 
-.booking-item input:focus,
-.booking-item textarea:focus {
+.booking-item .item-input-container input:focus,
+.booking-item .item-input-container textarea:focus {
     outline-color: var(--color-1);
 }
 
-.booking-item .item-request {
+.booking-item .item-input-container .item-request {
     grid-area: request;
 }
 
-.booking-item .item-request textarea {
+.booking-item .item-input-container .item-request textarea {
     height: 100px;
 }
 
-
-.booking-item .item-price {
+.booking-item .item-input-container .item-price {
     grid-area: price;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    margin: auto;
-    padding-bottom: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
 }
 
-.booking-item .item-button-container {
+.booking-item .item-input-container .item-button-container {
     grid-area: button;
     display: flex;
     width: 100%;
@@ -156,6 +159,7 @@
 .booking-item .item-button-container > button {
     padding: 10px 20px;
     border-radius: 5px;
+    width: 100%;
     border: none;
     background-color: var(--color-3);
     color: white;
@@ -176,6 +180,35 @@
 
 .booking-item .item-button-container > button.btn-buy:hover {
     background-color: green;
+}
+
+
+@media screen and (min-width:768px) {
+    .giohang-item .booking-item {
+        grid-template-areas: 
+        "infomation-container input-container";
+        grid-template-columns: 1.5fr 2fr;
+    }
+
+    .booking-item .item-infomation-container > img {
+        height: 270px;
+    }
+    .booking-item .item-infomation-container h3 {
+        font-size: 20px;
+    }
+    .booking-item .item-infomation-container p {
+        font-size: 18px;
+    }
+    .booking-item .item-input-container {
+        padding: 10px 10px 0px 10px;
+    }
+    .booking-item .item-button-container > button {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    
 }
 
 /* 
