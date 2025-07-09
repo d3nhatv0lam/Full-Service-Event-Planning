@@ -9,12 +9,20 @@
     cursor: pointer;
 }
 
-
-#giohang > h2 {
+#giohang > .giohang-header {
     width: 100%;
-    padding: 20px 0px;
+    background-color: var(--color-3);
+}
+
+#giohang > .giohang-header > h1 {
+    padding: 5px 0px;
     text-align: center;
-    color: var(--color-3);
+    color: var(--color-2);
+}
+#giohang > .giohang-header > p {
+    padding-bottom: 15px;
+    text-align: center;
+    color: var(--color-4);
 }
 
 .giohang-list {
@@ -102,7 +110,8 @@
 
 .booking-item .item-address input,
 .booking-item .item-date input,
-.booking-item .item-time input{
+.booking-item .item-time input,
+.booking-item .item-request textarea {
     appearance: none;
     border: none;
     width: 100%;
@@ -111,6 +120,20 @@
     background-color: #EEEEEE;
     border-radius: 5px;
 }
+
+.booking-item input:focus,
+.booking-item textarea:focus {
+    outline-color: var(--color-1);
+}
+
+.booking-item .item-request {
+    grid-area: request;
+}
+
+.booking-item .item-request textarea {
+    height: 100px;
+}
+
 
 .booking-item .item-price {
     grid-area: price;
