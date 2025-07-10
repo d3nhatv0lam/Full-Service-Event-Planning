@@ -41,12 +41,33 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 .fa-cart-shopping{
     color: var(--color-4);
     font-size: 22px;
+    margin-right: 5px;
 }
 
 .fa-bars{
     color: var(--color-4);
     font-size: 22px;
     padding: 0 10px;
+}
+
+.fa-x {
+    color: var(--color-2);
+    font-size: 22px;
+    padding: 0 10px;
+    display: none;
+}
+
+.header-container .inner-menu .mainnav > ul > li{
+    margin-left: 23px;
+}
+
+.header-container .inner-menu .mainnav > ul > li > a{
+    text-decoration: none;
+    color: var(--color-4);
+}
+
+.header-container .inner-menu .mainnav > ul > li > a:hover {
+    color: var(--color-2);
 }
 
 .inner-toggle-btn {
@@ -60,6 +81,12 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 .header-container .inner-menu .mainnav.active{
     display: flex;
     justify-content: center;
+}
+
+.header-container .inner-menu .mainnav.active > ul > li{
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 10px;
 }
 
 .hide-when-menu-open{
@@ -77,6 +104,14 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 
 .inner-header-btn-change {
     align-self: flex-start;
+}
+
+.fa-bars.exchange-after-click{
+    display: none;
+}
+
+.fa-x.exchange-after-click{
+    display: block;
 }
 
 /* --------------------FOOTER FORMATING------------------------ */
@@ -124,6 +159,12 @@ footer p {
 }
 
 @media screen and (min-width: 1024px){
+    .fa-bars {
+        display: none;
+    }
+    .fa-cart-shopping {
+        margin-right: 22px;
+    }
     .header-container .inner-menu .mainnav{
         display: inline-block;
     }
