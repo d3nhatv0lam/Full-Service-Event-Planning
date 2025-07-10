@@ -25,11 +25,13 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     position: sticky;
     top: 0;
     left: 0;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
 .header.active {
     position: fixed;
     width: 100%;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
 .header-container {
