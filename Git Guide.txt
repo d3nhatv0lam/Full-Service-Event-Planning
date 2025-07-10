@@ -10,3 +10,8 @@ git pull origin main
 git add .
 git commit -m "<comment>"
 git push origin main
+
+Code tiếp thì lỗi?(chưa commit và push đoạn code lỗi),  muốn quay về lần lưu gần nhất trước đó 
+git fetch
+git reset --hard
+
