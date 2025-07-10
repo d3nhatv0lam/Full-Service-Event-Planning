@@ -31,7 +31,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8px;
+    padding: 15px 8px;    
 }
 
 .header-container .inner-logo img {
@@ -42,6 +42,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     color: var(--color-4);
     font-size: 22px;
     margin-right: 5px;
+    padding: 10px 0px;
 }
 
 .fa-bars{
@@ -64,6 +65,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 .header-container .inner-menu .mainnav > ul > li > a{
     text-decoration: none;
     color: var(--color-4);
+    font-size: 20px;
 }
 
 .header-container .inner-menu .mainnav > ul > li > a:hover {
@@ -86,7 +88,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 .header-container .inner-menu .mainnav.active > ul > li{
     text-align: center;
     margin-left: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 }
 
 .hide-when-menu-open{
@@ -103,7 +105,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 }
 
 .inner-header-btn-change {
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 .fa-bars.exchange-after-click{
@@ -155,10 +157,33 @@ footer p {
 }
 
 @media screen and (min-width: 768px){
-    
+    /* HEADER RESPONSIVE */
+    .header-container .inner-menu .mainnav > ul > li > a{
+        font-size: 24px;
+    }
+    .header-container .inner-logo img {
+        height: 35px;
+    }
+    .fa-cart-shopping{
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    .fa-bars{
+        font-size: 25px;
+    }
+    .fa-x {
+        font-size: 25px;
+    }
 }
 
 @media screen and (min-width: 1024px){
+    .header-container .inner-logo img {
+        height: 38px;
+    }
+    .fa-cart-shopping{
+        font-size: 28px;
+        margin-right: 10px;
+    }
     .fa-bars {
         display: none;
     }
@@ -171,5 +196,8 @@ footer p {
     .header-container .inner-menu ul{
         display: flex;
         list-style-type: none;
+    }
+    .header-container .inner-menu .mainnav > ul > li > a{
+        font-size: 16px;
     }
 }
