@@ -5,9 +5,6 @@
     align-items: center;
 }
 
-.clickable {
-    cursor: pointer;
-}
 
 #giohang > .giohang-header {
     width: 100%;
@@ -27,12 +24,12 @@
 
 .giohang-list {
     width: 100%;
-    padding: 10px 20px;
+    padding: 0px 20px;
     gap: 10px;
 }
 
 .giohang-list > li {
-    margin: 5px 0px 10px 0px;
+    margin: 20px 0px;
 }
 
 .giohang-item {
@@ -51,7 +48,7 @@
         "input-container";
 }
 
-.booking-item label {
+.booking-item label{
     display: block;
     font-weight: bold;
 }
@@ -60,14 +57,12 @@
 {
     grid-area: infomation-container;
     display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
 .item-infomation-container > img {
     width: 100%;
     padding: 5px;
-    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid #EEEEEE;
@@ -126,7 +121,7 @@
 
 .booking-item .item-input-container input:focus,
 .booking-item .item-input-container textarea:focus {
-    outline-color: var(--color-1);
+    outline-color: var(--color-3);
 }
 
 .booking-item .item-input-container .item-request {
@@ -184,15 +179,40 @@
 
 
 @media screen and (min-width:768px) {
+
+    .giohang-list{
+        padding: 0px 50px;
+    }
+
+
     .giohang-item .booking-item {
         grid-template-areas: 
         "infomation-container input-container";
         grid-template-columns: 1.5fr 2fr;
     }
 
-    .booking-item .item-infomation-container > img {
-        height: 270px;
+    .booking-item > .item-infomation-container 
+    {
+        display: grid;
+        grid-template-areas: 
+        "img"
+        "title";
+        grid-template-rows: 3fr 0.8fr;
     }
+
+    .booking-item .item-infomation-container > img {
+        grid-area: img;
+        height: 100%;
+    }
+    .item-infomation-container > div {
+        grid-area: title;
+    }
+
+    .booking-item label{
+        font-size: 17px;
+    }
+
+
     .booking-item .item-infomation-container h3 {
         font-size: 20px;
     }
@@ -208,7 +228,28 @@
 }
 
 @media screen and (min-width:1024px) {
-    
+    .giohang-list{
+       padding: 0px 100px;
+       width: fit-content;
+    }
+
+    .giohang-list li{
+       height: 400px;
+       max-width: 1500px;
+    }
+
+    .booking-item {
+        height: 100%;
+    }
+
+    .booking-item label{
+        font-size: 19px;
+    }
+
+    .booking-item > .item-infomation-container {
+        grid-template-rows: 1fr 0.2fr;
+    }
+
 }
 
 /* 

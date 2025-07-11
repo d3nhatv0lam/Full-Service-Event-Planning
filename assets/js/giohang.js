@@ -112,24 +112,83 @@ document.addEventListener("DOMContentLoaded", function () {
     loadCartPage();
 });
 
-function createCartItem() {
 
+function removeCartItem(productId,rank) {
+    DATABASE.cart = DATABASE.cart.filter(item => {
+        return !(item.productID === productId && item.rank === rank);
+    });
+    console.log(DATABASE.cart);
+    saveDatabase(DATABASE_NAME,DATABASE);
+    // xóa xong thì load lại
+    loadCartItem();
 }
 
-function removeCartItem() {
+function castCartItemFromTemplate(item) {
+    var sp = DATABASE.product.list[item.productID];
+    var price = parseInt(sp.rank[item.rank].price);
+    return `<form class="booking-item">
+                        <div class="item-infomation-container">
+                            <img src="${sp.image}" alt="placeholder">
+                            <div>
+                                <h3>Gói tổ chức ${sp.name}</h3>
+                                <p>Gói <a href="sanpham.html">${item.rank}</a></p>
+                            </div>
+                        </div>
 
+                        <div class="item-input-container">
+                            <div class="item-address">
+                                <label>Địa chỉ tổ chức sự kiện:</label>
+                                <input type="text" name="address" class="booking-address"
+                                    placeholder="Nhập địa chỉ tổ chức sự kiện">
+                            </div>
+
+                            <div class="item-time">
+                                <label>Thời gian:</label>
+                                <input type="time" name="time" class="booking-time"></select>
+                            </div>
+
+                            <div class="item-date">
+                                <label>Ngày tổ chức:</label>
+                                <input name="date" type="date">
+                            </div>
+
+                            <div class="item-request">
+                                <label>Yêu cầu đặc biệt/Ghi chú:</label>
+                                <textarea placeholder="Ghi chú của bạn"></textarea>
+                            </div>
+
+                            <p class="item-price">${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price)}</p>
+                            <div class="item-button-container">
+                                <button class="btn-remove">Hủy</button>
+                                <button class="btn-buy">Đặt</button>
+                            </div>
+                        </div>
+                    </form>`;
 }
 
 function loadCartItem() {
-    var giohang = document.getElementById("giohangList");
-    if (giohang == null) return;
+    var $giohangList = $("#giohangList");
+    if ($giohangList.length === 0) return;
     // load gio hang
     DATABASE.cart.forEach(item => {
         // get element from localstorage
         if (typeof DATABASE.product.list[item.productID] === "undefined") return;
 
+        var $li = $("<li>")
+            .addClass("giohang-item")
+            .data("productid",item.productID)
+            .data("rank",item.rank);
 
-        var li = document.createElement("li");
+        $li.html(castCartItemFromTemplate(item));
+
+        $li.find(".btn-remove").click(function(e){
+            removeCartItem($li.data("productid"),$li.data("rank"));
+        });
+        $li.find(".btn-buy").click(function(e){
+            alert("Đã đặt thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
+        });
+
+        $giohangList.append($li);
     });
 
 
