@@ -156,21 +156,27 @@
     border-radius: 5px;
     width: 100%;
     border: none;
-    background-color: var(--color-3);
-    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    color: var(--color-4);
     cursor: pointer;
     margin: 0px;
+    font-weight: bold;
+}
+.booking-item .item-button-container > button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
 }
 
 .item-button-container > button.btn-remove {
-    background-color: red;
+    background-color: #e74c3c;
 }
 .item-button-container > button.btn-remove:hover {
     background-color: darkred;
 }
 
 .booking-item .item-button-container > button.btn-buy {
-    background-color: rgb(40, 233, 40);
+    background-color: #2cbd68;
 }
 
 .booking-item .item-button-container > button.btn-buy:hover {
@@ -212,13 +218,17 @@
         font-size: 17px;
     }
 
-
     .booking-item .item-infomation-container h3 {
         font-size: 20px;
     }
     .booking-item .item-infomation-container p {
         font-size: 18px;
     }
+
+    .booking-item .item-input-container .item-price {
+        font-size: 18px;
+    }
+
     .booking-item .item-input-container {
         padding: 10px 10px 0px 10px;
     }
@@ -234,7 +244,6 @@
     }
 
     .giohang-list li{
-       height: 400px;
        max-width: 1500px;
     }
 
@@ -248,6 +257,10 @@
 
     .booking-item > .item-infomation-container {
         grid-template-rows: 1fr 0.2fr;
+    }
+
+    .booking-item .item-input-container .item-price {
+        font-size: 20px;
     }
 
 }

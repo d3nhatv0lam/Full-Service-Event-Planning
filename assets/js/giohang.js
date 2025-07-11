@@ -157,7 +157,7 @@ function castCartItemFromTemplate(item) {
                                 <textarea placeholder="Ghi chú của bạn"></textarea>
                             </div>
 
-                            <p class="item-price">${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price)}</p>
+                            <p class="item-price">Giá: ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price)}</p>
                             <div class="item-button-container">
                                 <button class="btn-remove">Hủy</button>
                                 <button class="btn-buy">Đặt</button>
