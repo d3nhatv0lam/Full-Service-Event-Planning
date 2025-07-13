@@ -23,9 +23,14 @@
 }
 
 .giohang-list {
+    background-color: var(--color-4);
     width: 100%;
     padding: 0px 20px;
     gap: 10px;
+}
+
+.giohang-list:not(:has(:first-child)) {
+    height: 500px;
 }
 
 .giohang-list > li {
@@ -163,10 +168,10 @@
     margin: 0px;
     font-weight: bold;
 }
-.booking-item .item-button-container > button:hover {
+/* .booking-item .item-button-container > button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
     transform: translateY(-2px);
-}
+} */
 
 .item-button-container > button.btn-remove {
     background-color: #e74c3c;
@@ -240,7 +245,6 @@
 @media screen and (min-width:1024px) {
     .giohang-list{
        padding: 0px 100px;
-       width: fit-content;
     }
 
     .giohang-list li{

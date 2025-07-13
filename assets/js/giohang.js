@@ -117,18 +117,21 @@ function removeCartItem(productId,rank) {
     DATABASE.cart = DATABASE.cart.filter(item => {
         return !(item.productID === productId && item.rank === rank);
     });
-    console.log(DATABASE.cart);
     saveDatabase(DATABASE_NAME,DATABASE);
+    alert("đã xóa gói bạn chọn ra khỏi giỏ hàng!");
     // xóa xong thì load lại
     loadCartItem();
 }
 
 function castCartItemFromTemplate(item) {
+    var smImgPath = DATABASE.product.imgPath;
     var sp = DATABASE.product.list[item.productID];
     var price = parseInt(sp.rank[item.rank].price);
+    var today = new Date().toISOString().split('T')[0];
+
     return `<form class="booking-item">
                         <div class="item-infomation-container">
-                            <img src="${sp.image}" alt="placeholder">
+                            <img src="${smImgPath+sp.image}" alt="placeholder">
                             <div>
                                 <h3>Gói tổ chức ${sp.name}</h3>
                                 <p>Gói <a href="sanpham.html">${item.rank}</a></p>
@@ -144,12 +147,12 @@ function castCartItemFromTemplate(item) {
 
                             <div class="item-time">
                                 <label>Thời gian:</label>
-                                <input type="time" name="time" class="booking-time"></select>
+                                <input type="time" name="time">
                             </div>
 
                             <div class="item-date">
                                 <label>Ngày tổ chức:</label>
-                                <input name="date" type="date">
+                                <input name="date" type="date" min="${today}">
                             </div>
 
                             <div class="item-request">
@@ -159,8 +162,8 @@ function castCartItemFromTemplate(item) {
 
                             <p class="item-price">Giá: ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price)}</p>
                             <div class="item-button-container">
-                                <button class="btn-remove">Hủy</button>
-                                <button class="btn-buy">Đặt</button>
+                                <button type="button" class="btn-remove">Hủy</button>
+                                <button type="submit" class="btn-buy">Đặt</button>
                             </div>
                         </div>
                     </form>`;
@@ -169,6 +172,7 @@ function castCartItemFromTemplate(item) {
 function loadCartItem() {
     var $giohangList = $("#giohangList");
     if ($giohangList.length === 0) return;
+    $giohangList.html("");
     // load gio hang
     DATABASE.cart.forEach(item => {
         // get element from localstorage
@@ -184,8 +188,28 @@ function loadCartItem() {
         $li.find(".btn-remove").click(function(e){
             removeCartItem($li.data("productid"),$li.data("rank"));
         });
-        $li.find(".btn-buy").click(function(e){
-            alert("Đã đặt thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
+        $li.find(".booking-item").on("submit",function(e){
+            var address = $li.find(".item-address input").val();
+            var time = $li.find(".item-time input").val();
+            var date = $li.find(".item-date input").val();
+
+            if (!address) {
+                alert("Địa chỉ sự kiện không được để trống!");
+                e.preventDefault();
+                return;
+            }
+            if (!time) {
+                alert("Thời gian bắt đầu sự kiện không được để trống!");
+                e.preventDefault();
+                return;
+            }
+            if (!date) {
+                alert("Ngày bắt đầu sự kiện không được để trống!");
+                e.preventDefault();
+                return;
+            }
+
+            alert("Đã đặt gói thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
         });
 
         $giohangList.append($li);
