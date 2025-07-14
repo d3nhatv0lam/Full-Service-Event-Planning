@@ -1,6 +1,6 @@
 :root {
-    --color-1: #5810BE;
-    --color-2: #4FD5C8;
+    --color-1: #5810be;
+    --color-2: #4fd5c8;
     --color-3: #000000;
     --color-4: #FDFDF9;
 }
@@ -8,105 +8,127 @@
 
 .dangky-main {
     display: flex;
-    min-height: 100vh;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: url(/assets/images/home/hoi-thao.jpg) no-repeat;
+    background-size: cover;
+    padding: 23px;
 }
 
 .dangky-wrapper {
-    width: 420px;
-    color: var(--color-3);
-    background: transparent;
-    border: 2px solid gray;
-    padding: 30px 40px;
+    width: 470px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 4px solid;
     border-radius: 10px;
+    border-image: linear-gradient(90deg, var(--color-1), var(--color-2)) 1;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .dangky-wrapper h2 {
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
+    padding: 10px 0 20px 0;
+    color: var(--color-2);
 }
 
-.dangky-input-box input {
+.dangky-input-box label{
+    color: var(--color-4);
+    font-weight: bold;
+}
+
+.dangky-input-box .field {
     width: 100%;
     height: 50px;
     background: rgba(255, 255, 255, 0.25);
     border: none;
     outline: none;
-    border: 2px solid #000000;
-    border-radius: 30px;
-    font-size: 15px;
-    color: #000000;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
     padding: 0 10px 0 45px;
     margin: 10px;
     transition: .2s ease;
 }
 
 .dangky-input-box ::placeholder {
-    color: gray;
+    color: gainsboro;
 }
 
 
 .dangky-submit {
     width: 100%;
     height: 50px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(150, 91, 231, 0.6);
     border: none;
     outline: none;
-    border: 2px solid #000000;
+    border: 2px solid whitesmoke;
     border-radius: 30px;
-    font-size: 15px;
-    color: #000000;
-    margin-top: 20px;
+    font-size: 17px;
+    color: white;
+    margin-top: 30px;
     margin-left: 10px;
     font-weight: 600;
     transition: .2s ease;
 }
 
 .dangky-submit:hover {
-    background: rgba(79, 213, 200, 0.5);
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: rgba(88, 16, 190, 0.75);
+    ;
 }
 
-.dangky-2col {
+.dangky-input-box label {
+    color: var(--color-4);
+    font-weight: 550;
+}
+
+.dangky-logreg {
     display: flex;
     justify-content: space-between;
-    color: black;
-    margin: 12px;
+    color: #FDFDF9;
+    margin-top: 30px;
     font-size: small;
+    justify-content: center;
+    font-size: medium;
 }
 
-@media only screen and (max-width: 540px) {
-    .dangky-main {
-        width: 100%;
-        height: 500px;
-    }
+.sign-up-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
 
+.sign-up-link:hover {
+    color: #4fd5c8;
+}
+
+@media only screen and (max-width: 768px) {
     .dangky-wrapper {
-        width: 100%;
-        padding: 0 20px;
-
-    }
-
-    .dangky-wrapper h2 {
-        font-size: 25px;
-    }
-
-    .dangky-input-box inpaut {
-        width: 80%;
-        height: 80%;
-        font-size: 14px;
-        height: 35px;
+        min-height: 100%;
     }
 
     .dangky-wrapper .dangky-2col {
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        font-size: medium;
     }
 
-    .dangky-submit {
-        height: 40px;
-        font-size: 13px;
+    .dangky-wrapper h2 {
+        font-size: 33px;
+    }
+
+    .dangky-input-box .field {
+        width: 100%;
+        padding: 0 10px 0 30px;
+        height: 50px;
+    }
+
+    .sign-up-link {
+        font-size: medium;
     }
 }
