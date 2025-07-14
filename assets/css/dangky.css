@@ -4,49 +4,109 @@
     --color-3: #000000;
     --color-4: #FDFDF9;
 }
-.dangky-main{
+
+
+.dangky-main {
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
 }
 
-.dangky-wrapper{
+.dangky-wrapper {
     width: 420px;
     color: var(--color-3);
+    background: transparent;
+    border: 2px solid gray;
+    padding: 30px 40px;
+    border-radius: 10px;
 }
 
-.dangky-wrapper h2{
+.dangky-wrapper h2 {
     font-size: 36px;
     text-align: center;
 }
 
-.dangky-input-box input{
+.dangky-input-box input {
     width: 100%;
-    height: 100%;
-    background: transparent;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.25);
     border: none;
     outline: none;
-    border: 2px solid #FDFDF9;
-    border-radius: 40px;
-    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    font-size: 15px;
     color: #000000;
-    padding: 20px 45px 20px 20px;
+    padding: 0 10px 0 45px;
+    margin: 10px;
+    transition: .2s ease;
 }
 
-.dangky-input-box ::placeholder{
-    color: #5810BE  ;
+.dangky-input-box ::placeholder {
+    color: gray;
 }
 
-.dangky-wrapper .btn{
+
+.dangky-submit {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    outline: none;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #000000;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.dangky-submit:hover {
+    background: rgba(79, 213, 200, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dangky-2col {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin: 12px;
+    font-size: small;
+}
+
+@media only screen and (max-width: 540px) {
+    .dangky-main {
         width: 100%;
-        height: 45px;
-        background: #4FD5C8;
-        border: none;
-        outline: none;
-        border-radius: 40px;
-        cursor: pointer;
-        font-size: 16px;
-        color: #333;
-        font-weight: 600;
+        height: 500px;
+    }
+
+    .dangky-wrapper {
+        width: 100%;
+        padding: 0 20px;
+
+    }
+
+    .dangky-wrapper h2 {
+        font-size: 25px;
+    }
+
+    .dangky-input-box inpaut {
+        width: 80%;
+        height: 80%;
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .dangky-wrapper .dangky-2col {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .dangky-submit {
+        height: 40px;
+        font-size: 13px;
+    }
 }

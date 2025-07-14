@@ -21,28 +21,43 @@
 </head>
 
 <body>
-    <header class="header padding">
-        <!-- <a href="index.html"><img class="header-icon" src="assets/images/header-logo.svg" alt="evermont"></a> -->
-        <a class="a-icon clickable" href="index.html">
-            <img class="header-icon" src="assets/images/evermont_logo.svg" alt="evermont">
-        </a>
+    <header class="header">
+        <div class="header-container">
+            <div class="inner-wrap">
 
-        <nav id="nav" class="nav-warp">
-            <a class="clickable" href="index.html">TRANG CHỦ</a>
-            <a class="clickable" href="gioithieu.html">GIỚI THIỆU</a>
-            <a class="clickable" href="sanpham.html">SẢN PHẨM</a>
-            <a class="clickable" href="lienhe.html">LIÊN HỆ<f/a>
-            <a class="clickable" href="dangnhap.html">ĐĂNG NHẬP</a>
-            <a class="clickable" href="dangky.html">ĐĂNG KÝ</a>
-            <a class="clickable" href="giohang.html">GIỎ HÀNG</a>
-        </nav>
+                <div class="inner-logo">
+                    <a class="a-icon" href="index.html">
+                        <img class="header-icon" src="assets/images/evermont_logo.svg" alt="evermont">
+                    </a>
+                </div>
 
-        <div class="moblie-nav">
-            <div id="btn-menu" class="button">
-                <i class="fa-solid fa-bars"></i>
+                <div class="inner-menu">
+                    <nav class="mainnav" id="mainnav">
+                        <ul>
+                            <li><a href="index.html">TRANG CHỦ</a></li>
+                            <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                            <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                            <li><a href="dangnhap.html">ĐĂNG NHẬP</a></li>
+                            <li><a href="dangky.html">ĐĂNG KÝ</a></li>
+                            <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="inner-header-btn">
+                    <div class="inner-shopping-cart">
+                        <a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="inner-toggle-btn" id="toggle">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </header>
+
 
     <main class="dangky-main">
         <div class="dangky-wrapper">
@@ -59,7 +74,7 @@
                 </div>
 
                 <div class="dangky-input-box">
-                    <label>Email</label>
+                    <label>Địa chỉ Email</label>
                     <input type="text" placeholder="Nhập email của bạn">
                 </div>
 
@@ -68,15 +83,21 @@
                     <input type="password" placeholder="Nhập mật khẩu">
                 </div>
 
-                <div class="dangky-rights">
-                    <label><input type="checkbox">Tôi đồng ý với điều khoản của Evermont</label>
+                <div class="dangky-input-box">
+                    <input type="submit" class="dangky-submit" value="Đăng Ký">
                 </div>
 
-                
-                <button type="submit" class="btn">Đăng Ký</button>
+                <div class="dangky-2col">
+                    <div class="dangky-rights">
+                        <label><input type="checkbox">Điều khoản của Evermont</label>
+                    </div>
+                    <div class="dangky-logreg">
+                        <p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a></p>
+                    </div>
+                </div>
 
-                <div class="dangky-logreg"><p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a></p></div>
-                
+
+
             </form>
         </div>
     </main>
