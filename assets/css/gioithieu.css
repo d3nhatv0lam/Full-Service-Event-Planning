@@ -20,52 +20,121 @@
     padding: 0px 20px;
 }
 
-#gt-h1 {
+/* HEADER */
+.gt-header {
+    padding: 20px 0px;
+    align-items: center;
+}
+
+.gt-header-title {
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: -2.00px;
     color: var(--color-2);
-    text-align: center;
-    font-size: 40px;
 }
 
-.gt-p {
+.gt-header-content {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.1px;
     color: var(--color-4);
-    text-align: center;
-    font-weight: 100;
 }
 
-#gt-header-img {
-    display: block;
-    margin: auto;
+/* SECTION 1 */
+.gt-section1 {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    background-image: url(../../assets/images/gioithieu/head-bg1.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 380px;
+}
+
+.gt-section1-cover {
+    padding: 120px 40px 0px 20px;
+    background-color: #0C0C0C40;
+    width: 100%;
+    height: 450px;
+}
+
+.gt-section1-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    margin-bottom: 20px;
+    color: var(--color-4);
+}
+
+/* TITLE, CONTENT || SECTION 2: ABOUT US || */ 
+.gt-section1-content, 
+.gt-about-content {
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    line-height: 1.5;
+    color: var(--color-4);
+}
+
+.gt-about-title {
+    font-size: 18px;
+    font-weight: 700;
+    color:var(--color-2);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: -0.13px;
+}
+
+/* SECTION 3: RECOMMENDED BY */
+/* NOTES: "rcm" = recommended */
+.gt-rcm {
+    padding: 20px 0px;
+}
+
+.gt-rcm-title {
+    font-weight: 700;
+    color: var(--color-2);
+    font-size: 14px;
+    letter-spacing: -0.60px;
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-.gt-img-container {
-    position: relative;
-    display: inline-block;
+.gt-rcm-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.gt-img-container img {
-    display: block;
-    width: 80%;
-    height: auto;
+.gt-rcm-item {
+    width: 100%;
+    border: 0.2px solid var(--color-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.gt-overlay-text {
-    color: var(--color-4);
+.gt-rcm-logo {
+    width: 100%;
+    padding: 0px 20px;
+    object-fit: contain;
 }
 
-.gt-h3 {
-    display: block;
-    margin: 20px 0px;
-    color: var(--color-2);
-    font-size: 20px;
+.gt-hsbc {
+    height: 80%;
 }
 
-.gt-p1 {
-    color: var(--color-4);
-    font-weight: 100;
-}
+@media (min-width: 768px) {
+    /* SECTION 1 */
+    
+    /* .gt-rcm-list {
+        flex-wrap: wrap;
+    }
 
-.gt-rcm-img {
-    width: 20%;
+    .gt-rcm-item {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+    } */
 }
-
