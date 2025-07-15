@@ -59,21 +59,25 @@
     </header>
     <main>
         <div id="trangchu" class="index-container">
-            <section class="trangchu-cover">
-                <div class="tchu-section1-text1">
-                    <p>Hiện thực ý tưởng của bạn cùng với</p>
+            <section class="tchu-section-1">
+                <div class="trangchu-cover">
+                    <div class="tchu-section1-text1">
+                        <p>Hiện thực ý tưởng của bạn cùng với</p>
+                    </div>
+                    <div class="tchu-section1-layer-img">
+                        <img src="assets/images/home/layer-img.png" class="layer-img">
+                    </div>
+                    <div class="tchu-section1-text2">
+                        <p>"Nơi ký ức bắt đầu - Nơi cảm xúc thăng hoa"</p>
+                    </div>
+                    <div>
+                        <div class="tchu-section1-learnmore-btn">
+                            <a class="a-learnmore" href="sanpham.html">
+                                Tìm hiểu ngay
+                            </a>
+                        </div>   
+                    </div> 
                 </div>
-                <div class="tchu-section1-layer-img">
-                    <img src="assets/images/home/layer-img.png" class="layer-img">
-                </div>
-                <div class="tchu-section1-text2">
-                    <p>"Nơi ký ức bắt đầu - Nơi cảm xúc thăng hoa"</p>
-                </div>
-                <div class="tchu-section1-learnmore-btn">
-                    <a class="a-learnmore" href="sanpham.html">
-                        Tìm hiểu ngay
-                    </a>
-                </div>    
             </section>
 
             <section class="trangchu-summary">
@@ -270,20 +274,7 @@
         </div>
     </footer>
 
-    <script>
-        var toggle = document.getElementById("toggle");
-        var mainnav = document.getElementById("mainnav");
-        toggle.onclick = function(){
-            mainnav.classList.toggle('active');
-            document.querySelector('.inner-logo').classList.toggle('hide-when-menu-open');
-            document.querySelector('.inner-shopping-cart').classList.toggle('hide-when-menu-open');
-            document.querySelector('.inner-wrap').classList.toggle('inner-wrap-change');
-            document.querySelector('.inner-header-btn').classList.toggle('inner-header-btn-change');
-            document.querySelector('.fa-bars').classList.toggle('exchange-after-click');
-            document.querySelector('.fa-x').classList.toggle('exchange-after-click');
-            document.querySelector('.header').classList.toggle('active');
-        }
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

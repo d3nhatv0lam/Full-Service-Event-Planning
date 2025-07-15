@@ -16,13 +16,46 @@
     font-family: 'Montserrat', sans-serif;
 }
 /* ------------SECTION 1: COVER TRANG CHỦ------------ */
+.index-container {
+    width: 100%;
+}
+
+.tchu-section-1{
+    background-image: url(../../assets/images/home/head-bg.jpg);
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+}
+
 .trangchu-cover {
-    background: gray;
-    height: 200px;
+    background-color: #5810BE45;
+    height: 225px;
+    width: 100%;
+    padding: 20px;
+}
+
+.trangchu-cover > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.tchu-section1-text1 > p{
+    color: var(--color-2);
+    margin-bottom: 15px;
 }
 
 .layer-img {
-    height: 30px;
+    height: 53px;
+}
+
+.tchu-section1-text2 > p{
+    color: var(--color-4);
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 12px;
 }
 
 .a-learnmore{

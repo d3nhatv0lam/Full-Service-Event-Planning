@@ -26,12 +26,14 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     top: 0;
     left: 0;
     transition: width 1s ease-in-out, height 1s ease-in-out;
+    z-index: 9999;
 }
 
 .header.active {
     position: fixed;
     width: 100%;
     transition: width 1s ease-in-out, height 1s ease-in-out;
+    z-index: 9999;
 }
 
 .header-container {
@@ -57,7 +59,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 .fa-cart-shopping{
     color: var(--color-4);
     font-size: 22px;
-    margin-right: 7px;
+    margin-right: 10px;
     padding: 10px 0px;
 }
 
