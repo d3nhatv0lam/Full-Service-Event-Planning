@@ -60,13 +60,13 @@
 
 .a-learnmore{
     text-decoration: none;
-    color: var(--color-4);    
+    color: var(--color-4);  
+    font-size: 8.5px;  
 }
 
 .tchu-section1-learnmore-btn {
     width: 90px;
     height: 20px;
-    font-size: 8.5px;
     background: var(--color-1);
     border-radius: 8px;
     padding: auto auto;
@@ -75,6 +75,9 @@
     align-items: center;
 }
 
+.tchu-btn:hover{
+    background-color: var(--color-2);
+}
 /* ------------SECTION 2: TÓM TẮT VỀ CÔNG TY------------ */
 
 .trangchu-summary {
@@ -151,4 +154,73 @@
 .trangchu-customer-review {
     background: gray;
     height: 310px;
+}
+
+@media screen and (min-width: 768px){
+    /* ------------SECTION 1: COVER TRANG CHỦ------------ */
+    .trangchu-cover {
+        height: 450px;
+        padding: 30px;
+    }
+
+    .tchu-section1-text1 > p{
+        color: var(--color-2);
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    .layer-img {
+        height: 100px;
+    }
+
+    .tchu-section1-text2 > p{
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .a-learnmore{
+        text-decoration: none;
+        color: var(--color-4);  
+        font-size: 13px; 
+    }
+
+    .tchu-section1-learnmore-btn {
+        width: 140px;
+        height: 40px;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+     /* ------------SECTION 1: COVER TRANG CHỦ------------ */
+    .trangchu-cover {
+        height: 510px;
+        padding: 25px;
+    }
+    .tchu-section1-text1 > p{
+        color: var(--color-2);
+        margin-bottom: 30px;
+        font-size: 35px;
+    }
+
+    .layer-img {
+        height: 130px;
+    }
+
+    .tchu-section1-text2 > p{
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+
+    .a-learnmore{
+        text-decoration: none;
+        color: var(--color-4);  
+        font-size: 18px; 
+    }
+
+    .tchu-section1-learnmore-btn {
+        width: 170px;
+        height: 50px;
+        border-radius: 25px;
+    }
 }
