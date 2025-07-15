@@ -87,9 +87,9 @@
 
 /* SECTION 3: RECOMMENDED BY */
 /* NOTES: "rcm" = recommended */
-.gt-rcm {
-    padding: 20px 0px;
-}
+/* .gt-rcm {
+    padding: px 0px;
+} */
 
 .gt-rcm-title {
     font-weight: 700;
@@ -110,6 +110,7 @@
 
 .gt-rcm-item {
     width: 100%;
+    height: 90px;
     border: 0.2px solid var(--color-4);
     display: flex;
     justify-content: center;
@@ -118,12 +119,15 @@
 
 .gt-rcm-logo {
     width: 100%;
-    padding: 0px 20px;
+    padding: 10px 10px;
     object-fit: contain;
 }
 
-.gt-hsbc {
-    height: 80%;
+.gt-bvlgari,
+.gt-YG,
+.gt-hsbc,
+.gt-mastercard {
+    height: 90%;
 }
 
 @media (min-width: 768px) {
