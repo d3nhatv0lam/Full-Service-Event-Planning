@@ -3,7 +3,7 @@ const database_template =
     login: false,
 
     product: {
-        imgPath: "./assets/images/product",
+        imgPath: "./assets/images/product/",
         rankDescription: {
             silver: [
                 "Tư vấn và lên kế hoạch sự kiện cơ bản",
@@ -22,7 +22,7 @@ const database_template =
         list:{
             sp001:{
                 name: "Hội thảo",
-                image: "sanpham1.jpg",
+                image: "hoi-thao.jpg",
                 description: "Tổ chức hội thảo chuyên nghiệp với không gian sang trọng, thiết bị hiện đại và đội ngũ điều phối giàu kinh nghiệm. Phù hợp với các buổi tọa đàm, đào tạo nội bộ hay hội nghị quy mô lớn.",
                 rank: {
                     silver: {
@@ -35,7 +35,7 @@ const database_template =
             },
             sp002:{
                 name: "Lễ Kỷ Niệm",
-                image: "sanpham2.jpg",
+                image: "le-ky-niem.jpg",
                 description: "Đánh dấu các cột mốc đáng nhớ bằng những buổi lễ kỷ niệm trang trọng, ấm cúng và đầy ý nghĩa - từ sinh nhật công ty, lễ thành lập, đến các ngày lễ tri ân đối tác và nhân viên.",
                 rank: {
                     silver: {
@@ -48,7 +48,7 @@ const database_template =
             },
             sp003:{
                 name: "Sự Kiện Khai Trương",
-                image: "sanpham2.jpg",
+                image: "su-kien-khai-truong.jpg",
                 description: "Gây ấn tượng ngay từ ngày đầu với lễ khai trương được thiết kế chỉn chu, mang bản sắc thương hiệu. Kết hợp truyền thông, nghệ thuật biểu diễn và trải nghiệm khách mời đẳng cấp.",
                 rank: {
                     silver: {
@@ -61,7 +61,7 @@ const database_template =
             },
             sp003:{
                 name: "Sự Kiện Âm Nhạc",
-                image: "sanpham2.jpg",
+                image: "su-kien-am-nhac.jpg",
                 description: "Biến mỗi sân khấu thành một bữa tiệc âm thanh và ánh sáng - từ concert ngoài trời đến mini show trong nhà. Âm thanh, ánh sáng, nghệ sĩ và cảm xúc - tất cả hòa quyện trong một đêm đáng nhớ.",
                 rank: {
                     silver: {

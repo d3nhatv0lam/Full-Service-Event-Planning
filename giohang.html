@@ -14,7 +14,8 @@
     <!-- Copy nhớ đổi tên file CSS -->
     <link rel="stylesheet" href="./assets/css/giohang.css" type="text/css">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- và thêm dòng này -->
     <!-- <link rel="stylesheet" href="./assets/css/style.min.css" type="text/css">    -->
     <title>Evermont Events | Giỏ Hàng</title>
@@ -22,25 +23,39 @@
 </head>
 
 <body>
-    <header class="header padding">
-        <!-- <a href="index.html"><img class="header-icon" src="assets/images/header-logo.svg" alt="evermont"></a> -->
-        <a class="a-icon clickable" href="index.html">
-            <img class="header-icon" src="assets/images/evermont_logo.svg" alt="evermont">
-        </a>
+    <header class="header">
+        <div class="header-container">
+            <div class="inner-wrap">
 
+                <div class="inner-logo">
+                    <a class="a-icon" href="index.html">
+                        <img class="header-icon" src="assets/images/evermont_logo.svg" alt="evermont">
+                    </a>
+                </div>
 
-        <nav id="nav" class="nav-warp">
-            <a class="clickable" href="index.html">TRANG CHỦ</a>
-            <a class="clickable" href="gioithieu.html">GIỚI THIỆU</a>
-            <a class="clickable" href="sanpham.html">SẢN PHẨM</a>
-            <a class="clickable" href="lienhe.html">LIÊN HỆ</a>
-            <a class="clickable" href="dangnhap.html">ĐĂNG NHẬP</a>
-            <a class="clickable" href="dangky.html">ĐĂNG KÝ</a>
-        </nav>
+                <div class="inner-menu">
+                    <nav class="mainnav" id="mainnav">
+                        <ul>
+                            <li><a href="index.html">TRANG CHỦ</a></li>
+                            <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                            <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                            <li><a href="dangnhap.html">ĐĂNG NHẬP</a></li>
+                            <li><a href="dangky.html">ĐĂNG KÝ</a></li>
+                            <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
-        <div class="moblie-nav">
-            <div id="btn-menu" class="button">
-                <i class="fa-solid fa-bars"></i>
+                <div class="inner-header-btn">
+                    <div class="inner-shopping-cart">
+                        <a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="inner-toggle-btn" id="toggle">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+
+                </div>
             </div>
         </div>
     </header>
@@ -99,43 +114,49 @@
     </main>
 
     <footer class="footer">
-        <div>
-            <a class="footer-icon clickable" href="index.html">
-                <img class="header-icon" src="assets/images/evermont_logo.svg" alt="evermont">
-            </a>
-            <h4>Công ty tổ chức sự kiện trọn gói hàng đầu Việt Nam</h4>
+        <div class="footer-container">
+            <div class="footer-logo-container">
+                <div class="footer-icon">
+                    <a class="footer-icon" href="index.html">
+                        <img class="ft-icon" src="assets/images/evermont_logo.svg" alt="evermont">
+                    </a>
+                </div>
+                <div class="footer-sub">
+                    <h4>Công ty tổ chức sự kiện trọn gói hàng đầu Việt Nam</h4>
+                </div>
+            </div>
+            <div class="ft-content-container">
+                <div class="branch b-cantho">
+                    <h3>Chi nhánh Cần Thơ</h3>
+                    <p>
+                        Địa chỉ: Đường 30/4, Ninh Kiều, Cần Thơ<br>
+                        Hotline: 0968.686.686<br>
+                        Email: evermont.cantho@gmail.com<br>
+                        Giờ mở cửa: 8h - 11h30, 14h - 21h<br>
+                        (Thứ Hai - Thứ Bảy)
+                    </p>
+                </div>
+                <div class="branch b-hcm">
+                    <h3>Chi nhánh TP.Hồ Chí Minh</h3>
+                    <p>
+                        Địa chỉ: 123 Nguyễn Trãi, Quận 1, TP.Hồ Chí Minh<br>
+                        Hotline: 0912.345.678<br>
+                        Email: evermont.tphcm@gmail.com<br>
+                        Giờ mở cửa: 8h - 11h30, 14h - 21h<br>
+                        (Thứ Hai - Thứ Bảy)
+                    </p>
+                </div>
+            </div>
+            <div class="ft-contact-container">
+                <h4>Kết nối với chúng tôi</h4>
+                <div class="inner-social">
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f ft-icon"></i></a>
+                    <a href="https://www.youtube.com"><i class="fa-brands fa-youtube ft-icon"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok ft-icon"></i></a>
+                </div>
+                <p>© 2025 Evermont Events. All Rights Reserved.</p>
+            </div>
         </div>
-
-        <div>
-            <h3>Chi nhánh Cần Thơ</h3>
-            <p>
-                Địa chỉ: Đường 30/4, Ninh Kiều, Cần Thơ<br>
-                Hotline: 0968.686.686<br>
-                Email: evermont.cantho@gmail.com<br>
-                Giờ mở cửa: Thứ Hai - Thứ Bảy: 8h - 11h30, 14h - 21h
-            </p>
-        </div>
-
-        <div>
-            <h3>Chi nhánh TP.Hồ Chí Minh</h3>
-            <p>
-                Địa chỉ: 123 Nguyễn Trãi, Quận 1, TP.Hồ Chí Minh<br>
-                Hotline: 0912.345.678<br>
-                Email: evermont.tphcm@gmail.com<br>
-                Giờ mở cửa: Thứ Hai - Thứ Bảy: 8h - 11h30, 14h - 21h
-            </p>
-        </div>
-
-        <div class="ft-contract-container">
-            <h4>Kết nối với chúng tôi</h4>
-            <span class="ft-contract-icon-container">
-                <a class="clickable" href="https://www.facebook.com"><i class="fa-brands fa-facebook-f ft-icon"></i></a>
-                <a class="clickable" href="https://www.youtube.com"><i class="fa-brands fa-twitter ft-icon"></i></a>
-                <a class="clickable" href="https://www.tiktok.com"><i class="fa-brands fa-pinterest ft-icon"></i></a>
-            </span>
-        </div>
-
-        <div id="copyright">© 2025 Evermont Events. All Rights Reserved.</div>
     </footer>
 
     <script src="assets/js/script.js"></script>
