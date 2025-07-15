@@ -23,7 +23,7 @@
 
 <body>
 
-    <header>
+    <header class="header">
         <div class="header-container">
             <div class="inner-wrap">
 
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="inner-menu">
-                    <nav>
+                    <nav class="mainnav" id="mainnav">
                         <ul>
                             <li><a href="index.html">TRANG CHỦ</a></li>
                             <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
@@ -46,11 +46,15 @@
                     </nav>
                 </div>
 
-                <div class="inner-shopping-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="inner-toggle-btn">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="inner-header-btn">
+                    <div class="inner-shopping-cart">
+                        <a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="inner-toggle-btn" id="toggle">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -61,7 +65,7 @@
             <h1>Dịch vụ</h1>
             <p>Chúng tôi mang đến giải pháp tổ chức sự kiện chuyên nghiệp cho mọi nhu cầu</p>
         </section>
-        <section class="sanpham-packages">
+        <!-- <section class="sanpham-packages">
             <div class="package">
                 <h2 class="silver">GÓI BẠC</h2>
                 <ul>
@@ -80,11 +84,27 @@
                     <li>Quay phim - chụp ảnh sự kiện (full gói + hậu kỳ)</li>
                 </ul>
             </div>
-        </section> 
+        </section> -->
+        <section class="sanpham-2goi">
+            <h1>1. Gói cơ bản</h1>
+            <ul>
+                <li>Tư vấn và lên kế hoạch sự kiện cơ bản</li>
+                <li>Thiết kế, bố trí không gian tiêu chuẩn</li>
+                <li>In ấn thiệp mời hoặc standee đơn giản</li>
+            </ul>
+            <h1>2. Gói nâng cao</h1>
+            <ul>
+                <p>Bao gồm toàn bộ dịch vụ trong gói Bạc</p>
+                <li>DJ / nghệ sĩ / MC chuyên nghiệp</li>
+                <li>Thiết kế concept - chủ đề riêng theo yêu cầu</li>
+                <li>Hệ thống âm thanh - ánh sáng cao cấp</li>
+                <li>Quay phim - chụp ảnh sự kiện (full gói + hậu kỳ)</li>
+            </ul>
+        </section>
         <section class="sanpham-list">
             <h2>Hội Thảo</h2>
             <div class="sanpham-element">
-                <img src="assets/images/home/hoi-thao.jpg">
+                <img src="assets/images/product/hoi-thao.jpg">
                 <p>
                     Tổ chức hội thảo chuyên nghiệp với không gian sang trọng, thiết bị hiện đại và đội ngũ điều phối giàu kinh nghiệm. 
                     Phù hợp với các buổi tọa đàm, đào tạo nội bộ hay hội nghị quy mô lớn.
@@ -103,7 +123,7 @@
             </div>
             <h2>Lễ Kỷ Niệm</h2>
             <div class="sanpham-element">
-                <img src="assets/images/home/le-ky-niem.jpg">
+                <img src="assets/images/product/le-ky-niem.jpg">
                 <p>
                     Đánh dấu các cột mốc đáng nhớ bằng những buổi lễ kỷ niệm trang trọng, ấm cúng và đầy ý nghĩa - 
                     từ sinh nhật công ty, lễ thành lập, đến các ngày lễ tri ân đối tác và nhân viên.
@@ -122,7 +142,7 @@
             </div>
             <h2>Sự Kiện Khai Trương</h2>
             <div class="sanpham-element">
-                <img src="assets/images/home/su-kien-khai-truong.jpg">
+                <img src="assets/images/product/su-kien-khai-truong.jpg">
                 <p>
                     Gây ấn tượng ngay từ ngày đầu với lễ khai trương được thiết kế chỉn chu, mang bản sắc thương hiệu. 
                     Kết hợp truyền thông, nghệ thuật biểu diễn và trải nghiệm khách mời đẳng cấp.
@@ -141,7 +161,7 @@
             </div>
             <h2>Sự Kiện Âm Nhạc</h2>
             <div class="sanpham-element">
-                <img src="assets/images/home/su-kien-am-nhac.jpg">
+                <img src="assets/images/product/su-kien-am-nhac.jpg">
                 <p>
                     Biến mỗi sân khấu thành một bữa tiệc âm thanh và ánh sáng - từ concert ngoài trời đến mini show trong nhà. 
                     Âm thanh, ánh sáng, nghệ sĩ và cảm xúc - tất cả hòa quyện trong một đêm đáng nhớ.
@@ -162,38 +182,48 @@
     </main>
 
     <footer class="footer">
-        <div>
-            <a class="footer-icon" href="index.html">
-                <img class="ft-icon" src="assets/images/evermont_logo.svg" alt="evermont">
-            </a>
-            <h4>Công ty tổ chức sự kiện trọn gói hàng đầu Việt Nam</h4>
-        </div>
-        <div>
-            <h3>Chi nhánh Cần Thơ</h3>
-            <p>
-                Địa chỉ: Đường 30/4, Ninh Kiều, Cần Thơ<br>
-                Hotline: 0968.686.686<br>
-                Email: evermont.cantho@gmail.com<br>
-                Giờ mở cửa: Thứ Hai - Thứ Bảy: 8h - 11h30, 14h - 21h
-            </p>
-        </div>
-        <div>
-            <h3>Chi nhánh TP.Hồ Chí Minh</h3>
-            <p>
-                Địa chỉ: 123 Nguyễn Trãi, Quận 1, TP.Hồ Chí Minh<br>
-                Hotline: 0912.345.678<br>
-                Email: evermont.tphcm@gmail.com<br>
-                Giờ mở cửa: Thứ Hai - Thứ Bảy: 8h - 11h30, 14h - 21h
-            </p>
-        </div>
-        <div>
-            <h4>Kết nối với chúng tôi</h4>
-            <div class="inner-social">
-                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f ft-icon"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube ft-icon"></i></a>
-                <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok ft-icon"></i></a>
+        <div class="footer-container">
+            <div class="footer-logo-container">
+                <div class="footer-icon">
+                    <a class="footer-icon" href="index.html">
+                        <img class="ft-icon" src="assets/images/evermont_logo.svg" alt="evermont">
+                    </a>
+                </div>
+                <div class="footer-sub">
+                    <h4>Công ty tổ chức sự kiện trọn gói hàng đầu Việt Nam</h4>
+                </div>
             </div>
-            <p>© 2025 Evermont Events. All Rights Reserved.</p>
+            <div class="ft-content-container">
+                <div class="branch b-cantho">
+                    <h3>Chi nhánh Cần Thơ</h3>
+                    <p>
+                        Địa chỉ: Đường 30/4, Ninh Kiều, Cần Thơ<br>
+                        Hotline: 0968.686.686<br>
+                        Email: evermont.cantho@gmail.com<br>
+                        Giờ mở cửa: 8h - 11h30, 14h - 21h<br>
+                        (Thứ Hai - Thứ Bảy)
+                    </p>
+                </div>
+                <div class="branch b-hcm">
+                    <h3>Chi nhánh TP.Hồ Chí Minh</h3>
+                    <p>
+                        Địa chỉ: 123 Nguyễn Trãi, Quận 1, TP.Hồ Chí Minh<br>
+                        Hotline: 0912.345.678<br>
+                        Email: evermont.tphcm@gmail.com<br>
+                        Giờ mở cửa: 8h - 11h30, 14h - 21h<br>
+                        (Thứ Hai - Thứ Bảy)
+                    </p>
+                </div>
+            </div>
+            <div class="ft-contact-container">
+                <h4>Kết nối với chúng tôi</h4>
+                <div class="inner-social">
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f ft-icon"></i></a>
+                    <a href="https://www.youtube.com"><i class="fa-brands fa-youtube ft-icon"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok ft-icon"></i></a>
+                </div>
+                <p>© 2025 Evermont Events. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
