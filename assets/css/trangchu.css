@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --color-1: #5810BE;
@@ -44,6 +43,7 @@
 .tchu-section1-text1 > p{
     color: var(--color-2);
     margin-bottom: 15px;
+    font-size: 16px;
 }
 
 .layer-img {
@@ -58,17 +58,17 @@
     font-size: 12px;
 }
 
-.a-learnmore{
+.tchu-a{
     text-decoration: none;
     color: var(--color-4);  
     font-size: 8.5px;  
 }
 
-.tchu-section1-learnmore-btn {
+.tchu-btn {
     width: 90px;
     height: 20px;
     background: var(--color-1);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: auto auto;
     display: flex; 
     justify-content: center; 
@@ -78,28 +78,56 @@
 .tchu-btn:hover{
     background-color: var(--color-2);
 }
+
 /* ------------SECTION 2: TÓM TẮT VỀ CÔNG TY------------ */
 
 .trangchu-summary {
-    background: #FDFDF9;
-    height: 315px
+    background: var(--color-4);
 }
 
-.a-aboutus{
-    text-decoration: none;
-    color: var(--color-4);    
+.trangchu-summary > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
-.tchu-section2-aboutus-btn {
-    width: 90px;
-    height: 20px;
-    font-size: 8.5px;
-    background: var(--color-1);
-    border-radius: 8px;
-    padding: auto auto;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+.tchu-section2-text1 > .section2-title{
+    color: var(--color-2);
+    font-size: 25px;
+    width: 80%;
+    text-align: center;
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 15px;
+}
+
+.tchu-section2-text1 > .section2-title > span {
+    color: gray;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    line-height: 20px;
+}
+
+.tchu-section2-text2 > p {
+    font-size: 16px;
+    text-align: center;
+    color: var(--color-3);
+    width: 300px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+i.tchu-line {
+    color: var(--color-2);
+    font-size: 20px;
+    line-height: 28px;
+    margin: 5px 0;
+}
+
+.tchu-section2-btn {
+    margin-bottom: 20px;
 }
 
 /* ------------SECTION 3: PHÂN LOẠI SỰ KIỆN------------ */
@@ -108,22 +136,6 @@
     height: 320px;
 }
 
-.a-contactus{
-    text-decoration: none;
-    color: var(--color-4);    
-}
-
-.tchu-section3-contactus-btn {
-    width: 90px;
-    height: 20px;
-    font-size: 8.5px;
-    background: var(--color-1);
-    border-radius: 8px;
-    padding: auto auto;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
 
 /* ------------SECTION 4: SỰ KIỆN NỔI BẬT------------ */
 .trangchu-outstand {
@@ -178,16 +190,47 @@
         font-size: 18px;
     }
 
-    .a-learnmore{
+    .tchu-a{
         text-decoration: none;
         color: var(--color-4);  
         font-size: 13px; 
     }
 
-    .tchu-section1-learnmore-btn {
+    .tchu-btn {
         width: 140px;
         height: 40px;
         border-radius: 20px;
+    }
+
+    /* ------------SECTION 2: TÓM TẮT VỀ CÔNG TY------------ */
+    .tchu-br {
+        display: none;
+    }
+
+    .tchu-section2-text1 > .section2-title{
+        font-size: 28px;
+        width: 100%;
+        line-height: 30px;
+        margin-top: 25px;
+    }
+
+    .tchu-section2-text1 > .section2-title > span {
+        font-size: 16px;
+    }
+
+    .tchu-section2-text2 > p {
+        font-size: 25px;
+        width: 75%;
+        font-weight: 300;
+        line-height: 35px;
+    }
+
+    i.tchu-line {
+        margin: 10px 0;
+    }
+
+    .tchu-section2-btn {
+        margin-bottom: 30px;
     }
 }
 
@@ -212,15 +255,39 @@
         font-size: 22px;
     }
 
-    .a-learnmore{
+    .tchu-a{
         text-decoration: none;
         color: var(--color-4);  
         font-size: 18px; 
     }
 
-    .tchu-section1-learnmore-btn {
+    .tchu-btn {
         width: 170px;
         height: 50px;
         border-radius: 25px;
+    }
+
+    /* ------------SECTION 2: TÓM TẮT VỀ CÔNG TY------------ */
+    .tchu-section2-text1 > .section2-title{
+        font-size: 35px;
+        line-height: 45px;
+        margin-top: 35px;
+    }
+
+    .tchu-section2-text1 > .section2-title > span {
+        font-size: 20px;
+    }
+
+    .tchu-section2-text2 > p {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    i.tchu-line {
+        margin: 15px 0;
+    }
+
+    .tchu-section2-btn {
+        margin-bottom: 40px;
     }
 }
