@@ -49,18 +49,18 @@
     background-position: center;
     border-radius: 5px;
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 .gt-section1-cover {
-    padding: 120px 40px 40px 20px;
+    padding: 100px 40px 40px 20px;
     background-color: #0C0C0C50;
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 .gt-section1-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.25px;
     margin-bottom: 20px;
@@ -130,8 +130,40 @@
     height: 90%;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     /* SECTION 1 */
+    .gt-section1 {
+        border-radius: 10px;
+        height: 550px;
+    }
+
+    .gt-section1-cover {
+        background-color: #0C0C0C70;
+        padding: 130px 60px 60px 40px;
+        height: 550px;
+    }
+
+    .gt-section1-title {
+        font-size: 42px;
+    }
+
+    /* TITLE, CONTENT || SECTION 2: ABOUT US || */ 
+    .gt-section1-content, 
+    .gt-about-content {
+        font-size: 22px;
+        letter-spacing: -0.1px;
+        line-height: 1.5;
+        color: var(--color-4);
+    }
+
+    .gt-about-title {
+        font-size: 18px;
+        font-weight: 700;
+        color:var(--color-2);
+        margin-top: 20px;
+        margin-bottom: 10px;
+        letter-spacing: -0.1px;
+    }
     
     /* .gt-rcm-list {
         flex-wrap: wrap;
@@ -141,4 +173,48 @@
         width: calc(50% - 5px);
         margin-bottom: 10px;
     } */
+}
+
+@media screen and (min-width: 1024px) {
+    /* SECTION 1 */
+    .gt-section1 {
+        margin-bottom: 40px;
+        margin-top: 20px;
+        border-radius: 15px;
+        height: 600px;
+    }
+
+    .gt-section1-cover {
+        background-color: #0C0C0C70;
+        padding: 180px 150px 60px 60px;
+        height: 600px;
+    }
+
+    .gt-section1-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    /* TITLE, CONTENT || SECTION 2: ABOUT US || */ 
+    .gt-section1-content {
+        margin-top: 40px;
+        padding-right: 400px;
+        font-size: 22px;
+    }
+    .gt-about-content {
+        font-size: 20px;
+        letter-spacing: -0.1px;
+        line-height: 1.5;
+        color: var(--color-4);
+    }
+
+    .gt-about-title {
+        font-size: 18px;
+        font-weight: 700;
+        color:var(--color-2);
+        margin-top: 20px;
+        margin-bottom: 10px;
+        letter-spacing: -0.1px;
+    }   
 }
