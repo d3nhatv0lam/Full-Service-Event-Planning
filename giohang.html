@@ -64,13 +64,67 @@
         <div id="giohang" class="container">
             <div class="giohang-header">
                 <h1>Giỏ hàng của bạn</h2>
-                    <p>
-                        Tận tâm, chuyên nghiệp, chuẩn mực, sáng tạo là niềm tự hào của chúng tôi
-                    </p>
+                <p>
+                    Tận tâm, chuyên nghiệp, chuẩn mực, sáng tạo là niềm tự hào của chúng tôi
+                </p>
+                <!-- Tạm: Cần Xóa khi Public ra -->
+                <div>
+                    <style>
+                        .btnTemp {
+                            position: relative;
+                            color: red;
+                            font-size: 18px;
+                            font-weight: bold;
+                            border: none;
+                            padding: 15px 40px; 
+                            cursor: pointer;
+                            overflow: hidden;
+                            z-index: 1; 
+                        }
+                        .btnTemp:hover::after {
+                            background: rgb(177, 199, 199);
+                        }
+                        .btnTemp::before {
+                        content: '';
+                        position: absolute;
+                        top: -50%;
+                        left: -50%;
+                        width: 200%;
+                        height: 200%;
+                        background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
+                        animation: spin 2s linear infinite;
+                        z-index: -1;
+                        pointer-events: none;
+                        }
+
+                        .btnTemp::after {
+                        transition: all 0.3s ease;
+                        content: '';
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                        right: 3px;
+                        bottom: 3px;
+                        background: #111;
+                        z-index: -1;
+                        border-radius: 5px;
+                        }
+
+                        @keyframes spin {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                        }
+                    </style>
+                    <button class="btnTemp" onclick="resetDatabase();">(Tạm) Reset Database</button>
+                </div>
             </div>
 
-            <ul id="giohangList" class="giohang-list">
-                <li class="giohang-item">
+            <div id="giohangList" class="giohang-list">
+                <!-- <section class="giohang-item">
                     <form class="booking-item">
                         <div class="item-infomation-container">
                             <img src="assets/images/home/le-ky-niem.jpg" alt="placeholder">
@@ -108,8 +162,8 @@
                             </div>
                         </div>
                     </form>
-                </li>
-            </ul>
+                </section> -->
+            </div>
         </div>
     </main>
 

@@ -5,12 +5,12 @@ const database_template =
     product: {
         imgPath: "./assets/images/product/",
         rankDescription: {
-            silver: [
+            standard: [
                 "Tư vấn và lên kế hoạch sự kiện cơ bản",
                 "Thiết kế, bố trí không gian tiêu chuẩn",
                 "In ấn thiệp mời hoặc standee đơn giản"
             ],
-            gold: [
+            advance: [
                 "Bao gồm toàn bộ dịch vụ trong gói Bạc",
                 "DJ / nghệ sĩ / MC chuyên nghiệp",
                 "Thiết kế concept - chủ đề riêng theo yêu cầu",
@@ -25,10 +25,10 @@ const database_template =
                 image: "hoi-thao.jpg",
                 description: "Tổ chức hội thảo chuyên nghiệp với không gian sang trọng, thiết bị hiện đại và đội ngũ điều phối giàu kinh nghiệm. Phù hợp với các buổi tọa đàm, đào tạo nội bộ hay hội nghị quy mô lớn.",
                 rank: {
-                    silver: {
+                    standard: {
                         price: 15000000
                     },
-                    gold: {
+                    advance: {
                         price: 25000000
                     }
                 }
@@ -38,10 +38,10 @@ const database_template =
                 image: "le-ky-niem.jpg",
                 description: "Đánh dấu các cột mốc đáng nhớ bằng những buổi lễ kỷ niệm trang trọng, ấm cúng và đầy ý nghĩa - từ sinh nhật công ty, lễ thành lập, đến các ngày lễ tri ân đối tác và nhân viên.",
                 rank: {
-                    silver: {
+                    standard: {
                         price: 10000000
                     },
-                    gold: {
+                    advance: {
                         price: 20000000
                     }
                 }
@@ -51,10 +51,10 @@ const database_template =
                 image: "su-kien-khai-truong.jpg",
                 description: "Gây ấn tượng ngay từ ngày đầu với lễ khai trương được thiết kế chỉn chu, mang bản sắc thương hiệu. Kết hợp truyền thông, nghệ thuật biểu diễn và trải nghiệm khách mời đẳng cấp.",
                 rank: {
-                    silver: {
+                    standard: {
                         price: 20000000
                     },
-                    gold: {
+                    advance: {
                         price: 30000000
                     }
                 }
@@ -64,10 +64,10 @@ const database_template =
                 image: "su-kien-am-nhac.jpg",
                 description: "Biến mỗi sân khấu thành một bữa tiệc âm thanh và ánh sáng - từ concert ngoài trời đến mini show trong nhà. Âm thanh, ánh sáng, nghệ sĩ và cảm xúc - tất cả hòa quyện trong một đêm đáng nhớ.",
                 rank: {
-                    silver: {
+                    standard: {
                         price: 25000000
                     },
-                    gold: {
+                    advance: {
                         price: 35000000
                     }
                 }
@@ -77,11 +77,11 @@ const database_template =
     cart: [
         {
             productID: "sp001",
-            rank: "silver"
+            rank: "standard"
         },
         {
             productID: "sp001",
-            rank: "gold"
+            rank: "advance"
         },
     ],
     userList: [
@@ -105,8 +105,14 @@ function saveDatabase(databaseName = DATABASE_NAME,database) {
     localStorage.setItem(databaseName, JSON.stringify(database));
 }
 
+function resetDatabase(databaseName = DATABASE_NAME) {
+    localStorage.setItem(databaseName, JSON.stringify(database_template));
+    DATABASE = getOrInitDatabase(databaseName);
+    loadCartPage();
+}
+
 const DATABASE_NAME = 'database';
-const DATABASE = getOrInitDatabase();
+var DATABASE = getOrInitDatabase();
 
 document.addEventListener("DOMContentLoaded", function () {
     loadCartPage();
@@ -120,7 +126,7 @@ function removeCartItem(productId,rank) {
     saveDatabase(DATABASE_NAME,DATABASE);
     alert("đã xóa gói bạn chọn ra khỏi giỏ hàng!");
     // xóa xong thì load lại
-    loadCartItem();
+    loadCartPage();
 }
 
 function castCartItemFromTemplate(item) {
@@ -178,20 +184,20 @@ function loadCartItem() {
         // get element from localstorage
         if (typeof DATABASE.product.list[item.productID] === "undefined") return;
 
-        var $li = $("<li>")
+        var $section = $("<section>")
             .addClass("giohang-item")
             .data("productid",item.productID)
             .data("rank",item.rank);
 
-        $li.html(castCartItemFromTemplate(item));
+        $section.html(castCartItemFromTemplate(item));
 
-        $li.find(".btn-remove").click(function(e){
-            removeCartItem($li.data("productid"),$li.data("rank"));
+        $section.find(".btn-remove").click(function(e){
+            removeCartItem($section.data("productid"),$section.data("rank"));
         });
-        $li.find(".booking-item").on("submit",function(e){
-            var address = $li.find(".item-address input").val();
-            var time = $li.find(".item-time input").val();
-            var date = $li.find(".item-date input").val();
+        $section.find(".booking-item").on("submit",function(e){
+            var address = $section.find(".item-address input").val();
+            var time = $section.find(".item-time input").val();
+            var date = $section.find(".item-date input").val();
 
             if (!address) {
                 alert("Địa chỉ sự kiện không được để trống!");
@@ -212,7 +218,7 @@ function loadCartItem() {
             alert("Đã đặt gói thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
         });
 
-        $giohangList.append($li);
+        $giohangList.append($section);
     });
 
 

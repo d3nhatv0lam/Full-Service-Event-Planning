@@ -23,18 +23,18 @@
 }
 
 .giohang-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-4);
     width: 100%;
-    padding: 0px 20px;
-    gap: 10px;
+    padding: 20px 15px;
+    row-gap: 20px;
 }
 
 .giohang-list:not(:has(:first-child)) {
     height: 500px;
-}
-
-.giohang-list > li {
-    margin: 20px 0px;
 }
 
 .giohang-item {
@@ -192,9 +192,8 @@
 @media screen and (min-width:768px) {
 
     .giohang-list{
-        padding: 0px 50px;
+        padding: 20px 50px;
     }
-
 
     .giohang-item .booking-item {
         grid-template-areas: 
@@ -243,16 +242,17 @@
 }
 
 @media screen and (min-width:1024px) {
+    #giohang > .giohang-header {
+        font-size: 24px;
+    }
+
     .giohang-list{
-       padding: 0px 100px;
+       padding: 20px 100px;
     }
 
-    .giohang-list li{
-       max-width: 1500px;
-    }
-
-    .booking-item {
-        height: 100%;
+    .giohang-item {
+        width: 75%;
+        max-width: 1500px;
     }
 
     .booking-item label{
@@ -266,17 +266,16 @@
     .booking-item .item-input-container .item-price {
         font-size: 20px;
     }
-
 }
 
 /* 
-    select animation
-.booking-item .item-select-warper {
+select animation
+    .item-select-warper {
     position: relative;
     width: 100%;
 }
 
-.booking-item .item-select-warper .item-select-icon {
+.item-select-warper .item-select-icon {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -285,6 +284,6 @@
     transition: transform 0.2s ease;
 }
 
-.booking-item select:focus + .item-select-icon {
+select:focus + .item-select-icon {
     transform: translateY(-50%) rotate(180deg);
 } */
