@@ -132,11 +132,65 @@ i.tchu-line {
 
 /* ------------SECTION 3: PHÂN LOẠI SỰ KIỆN------------ */
 .trangchu-category {
-    background: gray;
-    height: 320px;
+    background: var(--color-3);
 }
 
+.trangchu-category {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.tchu-section3-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tchu-section3-container > div {
+    width: 85%;
+    height: 215px;
+    background-position: center;
+    background-size: cover;
+    margin-top: 25px;
+}
+
+.tchu-section-3-inner-text {
+    color: var(--color-4);
+    position: relative;
+    top: 75%;
+    /* left: 40px; */
+    font-size: 25px;
+}
+
+.tchu-section3-img1{
+    background-image: url(../images/product/hoi-thao.jpg);
+}
+.tchu-section3-img2{
+    background-image: url(../images/product/le-ky-niem.jpg);
+}
+.tchu-section3-img3{
+    background-image: url(../images/product/su-kien-khai-truong.jpg);
+}
+.tchu-section3-img4{
+    background-image: url(../images/product/su-kien-am-nhac.jpg);
+}
+
+.tchu-section3-black {
+    width: 100%;
+    height: 100%;
+    background-color: #0C0C0C40;
+}
+
+.tchu-section-3-text {
+    width: 100%;
+}
+.tchu-section-3-text > p {
+    color: var(--color-2);
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+}
 /* ------------SECTION 4: SỰ KIỆN NỔI BẬT------------ */
 .trangchu-outstand {
     background: #FDFDF9;
