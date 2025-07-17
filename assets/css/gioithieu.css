@@ -44,7 +44,11 @@
 .gt-section1 {
     margin-bottom: 40px;
     margin-top: 20px;
-    background-image: url(../../assets/images/gioithieu/head-bg1.png);
+    padding: 0px 20px 0px;
+}
+
+.gt-section1-bg {  
+    background-image: url(../../assets/images/gioithieu/head-bg.png);
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -53,7 +57,7 @@
 }
 
 .gt-section1-cover {
-    padding: 100px 40px 40px 20px;
+    padding: 95px 40px 40px 30px;
     background-color: #0C0C0C50;
     width: 100%;
     height: 400px;
@@ -87,9 +91,6 @@
 
 /* SECTION 3: RECOMMENDED BY */
 /* NOTES: "rcm" = recommended */
-/* .gt-rcm {
-    padding: px 0px;
-} */
 
 .gt-rcm-title {
     font-weight: 700;
@@ -131,9 +132,26 @@
 }
 
 @media screen and (min-width: 768px) {
+    /* CONTAINER */
+    .gt-container {
+        padding: 0px 30px;
+    }
+
+    /* HEADER */
+    .gt-header-title {
+        font-size: 54px;
+    }
+
+    .gt-header-content {
+        font-size: 24px;
+    }
     /* SECTION 1 */
     .gt-section1 {
-        border-radius: 10px;
+        padding: 0px 50px 0px;
+    }
+
+    .gt-section1-bg {
+        border-radius: 15px;
         height: 550px;
     }
 
@@ -147,74 +165,123 @@
         font-size: 42px;
     }
 
-    /* TITLE, CONTENT || SECTION 2: ABOUT US || */ 
-    .gt-section1-content, 
-    .gt-about-content {
+    .gt-section1-content {
         font-size: 22px;
-        letter-spacing: -0.1px;
-        line-height: 1.5;
-        color: var(--color-4);
+    }
+    /* SECTION 2: ABOUT US || */ 
+    .gt-about {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 
     .gt-about-title {
-        font-size: 18px;
-        font-weight: 700;
-        color:var(--color-2);
-        margin-top: 20px;
-        margin-bottom: 10px;
-        letter-spacing: -0.1px;
+        font-size: 16px;
+        margin-top: 25px;
     }
-    
-    /* .gt-rcm-list {
-        flex-wrap: wrap;
+
+    .gt-about-content {
+        font-size: 15px;
+    }
+
+    /* SECTION 3: RECOMMENDED BY */
+    /* NOTES: "rcm" = recommended */
+    .gt-rcm-container {
+        padding-bottom: 30px;
+    }
+    .gt-rcm-title {
+        font-size: 20px;
+    }
+
+    .gt-rcm-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0;  
     }
 
     .gt-rcm-item {
-        width: calc(50% - 5px);
-        margin-bottom: 10px;
-    } */
+        width: 130px;
+        height: 130px;
+    }
+
+    .gt-rcm-logo {
+        width: 90%;
+    }
+
+    .gt-hsbc {
+        height: 80%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    /* CONTAINER */
+    .gt-container {
+        padding: 0px 40px;
+    }
+
+    /* HEADER */
+    .gt-header-title {
+        font-size: 60px;
+    }
+
+    .gt-header-content {
+        font-size: 28px;
+    }
+
     /* SECTION 1 */
     .gt-section1 {
-        margin-bottom: 40px;
-        margin-top: 20px;
-        border-radius: 15px;
+        padding: 0px 100px 0px;
+    }
+
+    .gt-section1-bg {
+        border-radius: 20px;
         height: 600px;
     }
 
     .gt-section1-cover {
-        background-color: #0C0C0C70;
-        padding: 180px 150px 60px 60px;
+        padding: 190px 60px 60px 60px;
         height: 600px;
     }
 
     .gt-section1-title {
         font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 20px;
     }
 
-    /* TITLE, CONTENT || SECTION 2: ABOUT US || */ 
     .gt-section1-content {
         margin-top: 40px;
-        padding-right: 400px;
-        font-size: 22px;
+        padding-right: 250px;
+        font-size: 24px;
     }
-    .gt-about-content {
-        font-size: 20px;
-        letter-spacing: -0.1px;
-        line-height: 1.5;
-        color: var(--color-4);
+    /* SECTION 2: ABOUT US || */ 
+    .gt-about-title {
+        font-size: 24px;
+        margin-top: 30px;
     }
 
-    .gt-about-title {
+    .gt-about-content {
         font-size: 18px;
-        font-weight: 700;
-        color:var(--color-2);
-        margin-top: 20px;
-        margin-bottom: 10px;
-        letter-spacing: -0.1px;
     }   
+
+    /* SECTION 3: RECOMMENDED BY */
+    /* NOTES: "rcm" = recommended */
+    .gt-rcm {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-startc;
+        align-items: center;
+        gap: 150px;
+        margin: 30px 70px 0px;
+    }
+
+    .gt-rcm-title {
+        font-size: 20px;
+
+    }
+
+    .gt-rcm-item {
+        width: 150px;
+        height: 150px;
+    }
 }
