@@ -29,8 +29,11 @@
     justify-content: center;
     background-color: var(--color-4);
     width: 100%;
-    padding: 20px 15px;
+    padding: 20px 20px;
     row-gap: 20px;
+    background-image: url("../images/bg/bg-1.png");
+    background-size: cover;
+
 }
 
 .giohang-list:not(:has(:first-child)) {
@@ -40,10 +43,12 @@
 .giohang-item {
     width: 100%;
     height: auto;
-    border: 1px solid var(--color-3);
-    border-radius: 10px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-4);
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
 .giohang-item .booking-item {
@@ -70,7 +75,7 @@
     padding: 5px;
     object-fit: cover;
     border-radius: 10px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #eeeeee;
 }
 
 .item-infomation-container > div {
@@ -78,6 +83,11 @@
     flex-direction: column;
     text-align: center;
     gap: 5px;
+}
+
+.item-infomation-container > div > p > a {
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .booking-item .item-input-container {
@@ -174,18 +184,18 @@
 } */
 
 .item-button-container > button.btn-remove {
-    background-color: #e74c3c;
+    background-color: gray;
 }
 .item-button-container > button.btn-remove:hover {
-    background-color: darkred;
+    background-color: #5a5561;
 }
 
 .booking-item .item-button-container > button.btn-buy {
-    background-color: #2cbd68;
+    background-color: #7C3AED;
 }
 
 .booking-item .item-button-container > button.btn-buy:hover {
-    background-color: green;
+    background-color: #5219b4;
 }
 
 
@@ -207,7 +217,7 @@
         grid-template-areas: 
         "img"
         "title";
-        grid-template-rows: 3fr 0.8fr;
+        grid-template-rows: 3fr 0.6fr;
     }
 
     .booking-item .item-infomation-container > img {
@@ -244,10 +254,6 @@
 @media screen and (min-width:1024px) {
     #giohang > .giohang-header {
         font-size: 24px;
-    }
-
-    .giohang-list{
-       padding: 20px 100px;
     }
 
     .giohang-item {
