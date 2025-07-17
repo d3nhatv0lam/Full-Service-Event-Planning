@@ -7,26 +7,29 @@
     --color-4: #FDFDF9;
 }
 
+.sanpham-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .sanpham-header {
     background-color: var(--color-3);
     color: var(--color-2);
     text-align: center;
     padding: 10px;
 }
-
 .sanpham-header h1 {
     font-size: 40px;
 }
-
 .sanpham-header p {
     color: white;
     font-size: 16px;
 }
 
 .sanpham-2goi {
-    max-width: 360px;
-    justify-self: center;
+    width: 90%;
     padding: 10px;
+    margin: auto;
 }
 .sanpham-2goi h1 {
     color: var(--color-1);
@@ -74,49 +77,56 @@
   background-color: #FFD700;
 } */
 
+
 .sanpham-list {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    /* justify-self: center; */
 }
 
-.sanpham-list h2 {
+.sanpham-box {
+    width: 90%;
+    margin: 10px auto;
+}
+.sanpham-box h2 {
     font-size: 20px;
     color: #5810BE;
     text-align: center;
-    padding-bottom: 2.5px;
+    margin-bottom: 5px;
 }
 
 .sanpham-element {
-    width: 340px;
     text-align: center;
     background-color: var(--color-3);
     border-radius: 5px;
-    margin-bottom: 10px;
 }
-
 .sanpham-element img {
-    width: 330px;
-    height: 194px;
-    margin-top: 5px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
-
 .sanpham-element p {
     color: var(--color-4);
     font-size: 13px;
-    margin: 0px 5px;
+    margin-bottom: 5px;
 }
 
 .sanpham-mucgia {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 5px 5px 0px 5px;
+    margin-top: 5px;
+    padding: 0px 50px 10px;
 }
 
 .sanpham-goi {
-    width: 105px;
+    flex: 1;
+    max-width: 150px;
     background-color: var(--color-1);
     color: var(--color-4);
     font-size: 11px;
