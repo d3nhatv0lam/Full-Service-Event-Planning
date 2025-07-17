@@ -4,20 +4,25 @@ const database_template =
 
     product: {
         imgPath: "./assets/images/product/",
-        rankDescription: {
-            standard: [
+        rank: {
+            standard: {
+                name: "Gói tiêu chuẩn",
+                description:[
                 "Tư vấn và lên kế hoạch sự kiện cơ bản",
                 "Thiết kế, bố trí không gian tiêu chuẩn",
                 "In ấn thiệp mời hoặc standee đơn giản"
-            ],
-            advance: [
+                ]
+            },
+            advance: {
+                name: "Gói nâng cao",
+                description:[
                 "Bao gồm toàn bộ dịch vụ trong gói Bạc",
                 "DJ / nghệ sĩ / MC chuyên nghiệp",
                 "Thiết kế concept - chủ đề riêng theo yêu cầu",
                 "Hệ thống âm thanh - ánh sáng cao cấp",
                 "Quay phim - chụp ảnh sự kiện (full gói + hậu kỳ)",
-            ]
-
+                ]
+            }
         },
         list:{
             sp001:{
@@ -84,14 +89,6 @@ const database_template =
             rank: "advance"
         },
     ],
-    userList: [
-        // {
-        //     userName: "",
-        //     password: "",
-        //     email: "",
-        //     phone: ""
-        // }
-    ]
 }
 
 function getOrInitDatabase(database = DATABASE_NAME) {
@@ -132,6 +129,7 @@ function removeCartItem(productId,rank) {
 function castCartItemFromTemplate(item) {
     var smImgPath = DATABASE.product.imgPath;
     var sp = DATABASE.product.list[item.productID];
+    var rankName = DATABASE.product.rank[item.rank].name;
     var price = parseInt(sp.rank[item.rank].price);
     var today = new Date().toISOString().split('T')[0];
 
@@ -140,7 +138,7 @@ function castCartItemFromTemplate(item) {
                             <img src="${smImgPath+sp.image}" alt="placeholder">
                             <div>
                                 <h3>Gói tổ chức ${sp.name}</h3>
-                                <p>Gói <a href="sanpham.html">${item.rank}</a></p>
+                                <p><a href="sanpham.html">${rankName}</a></p>
                             </div>
                         </div>
 
@@ -191,7 +189,7 @@ function loadCartItem() {
 
         $section.html(castCartItemFromTemplate(item));
 
-        $section.find(".btn-remove").click(function(e){
+        $section.find(".btn-remove").click(function(){
             removeCartItem($section.data("productid"),$section.data("rank"));
         });
         $section.find(".booking-item").on("submit",function(e){
