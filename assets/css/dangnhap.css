@@ -1,10 +1,9 @@
 :root {
-    --color-1: #5810BE;
+    --color-1: #5810be;
     --color-2: #4fd5c8;
     --color-3: #000000;
     --color-4: #FDFDF9;
 }
-
 
 
 .dangnhap-main {
@@ -12,68 +11,74 @@
     min-height: 80vh;
     align-items: center;
     justify-content: center;
-    background: url(/assets/images/home/hoi-thao.jpg) no-repeat;
+    background: url(../images/home/background.png) no-repeat;
     background-size: cover;
+    padding: 20px;
 }
 
 
 .dangnhap-wrapper {
-    width: 470px;
+    width: 380px;
     color: var(--color-3);
     background: rgba(0, 0, 0, 0.95);
     border: 4px solid;
     border-radius: 10px;
     border-image: linear-gradient(45deg, var(--color-1), var(--color-2)) 1;
-    padding: 50px 40px;
+    padding: 20px 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .dangnhap-wrapper h2 {
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
-    padding: 10px 0 20px 0;
+    padding: 5px 0 20px 0;
     color: var(--color-2);
 }
 
 .dangnhap-input-box .field {
     width: 100%;
-    height: 50px;
+    height: 48px;
     background: rgba(255, 255, 255, 0.25);
     border: none;
     outline: none;
-    border: 2px solid whitesmoke;
+    border: 2px solid white;
     border-radius: 20px;
-    font-size: 14px;
-    color: #fff;
-    padding: 0 10px 0 30px;
+    font-size: 12px;
+    color: white;
+    padding: 10px;
     margin: 10px;
     transition: .2s ease;
 }
 
+.dangnhap-input-box label{
+        font-size: 14px;
+        font-weight: bold;
+}
+
 .dangnhap-input-box ::placeholder {
-    color: gainsboro;
+    color: var(--color-4);
+    font-size: 12px;
 }
 
 .dangnhap-submit {
     width: 100%;
-    height: 50px;
-    background: rgba(150, 91, 231, 0.6);
+    height: 48px;
+    background: rgba(88, 16, 190);
     border: none;
     outline: none;
-    border: 2px solid whitesmoke;
-    border-radius: 30px;
-    font-size: 17px;
-    color: var(--color-2);
-    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    margin-top: 20px;
     margin-left: 10px;
     font-weight: 600;
     transition: .2s ease;
-    color: white;
 }
 
 .dangnhap-submit:hover {
     background: white;
-    color: rgba(88, 16, 190, 0.5);
+    color: var(--color-1);
 }
 
 .dangnhap-input-box label {
@@ -84,25 +89,30 @@
 .dangnhap-2col {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
     color: white;
     margin-top: 12px;
     font-size: small;
-    margin: 30px 0 0 10px;
+    margin: 20px 0 0 10px;
 }
+
+
 
 .logn-in-link {
     color: white;
     text-decoration: none;
-    font-size: small;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .logn-in-link:hover {
-    color: #4fd5c8;
+    color: var(--color-2);
 }
 
-@media only screen and (max-width: 768px) {
-    .dangnhap-wrapper {
+/* @media only screen and (max-width: 768px) {
+    .dangnhap-wrapper{
         min-height: 100%;
         margin: 40px;
     }
@@ -127,4 +137,4 @@
     .logn-in-link {
         font-size: medium;
     }
-}
+} */
