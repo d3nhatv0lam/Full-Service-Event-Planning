@@ -40,14 +40,14 @@
     color: var(--color-4);
 }
 
-/* SECTION 1 */
-.gt-section1 {
+/* INTRO */
+.gt-intro {
     margin-bottom: 40px;
     margin-top: 20px;
     padding: 0px 20px 0px;
 }
 
-.gt-section1-bg {  
+.gt-intro-bg {  
     background-image: url(../images/gioithieu/head-bg.png);
     background-size: cover;
     background-position: center;
@@ -56,14 +56,14 @@
     height: 400px;
 }
 
-.gt-section1-cover {
+.gt-intro-cover {
     padding: 95px 40px 40px 30px;
     background-color: #0C0C0C50;
     width: 100%;
     height: 400px;
 }
 
-.gt-section1-title {
+.gt-intro-title {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.25px;
@@ -72,7 +72,7 @@
 }
 
 /* TITLE, CONTENT || SECTION 2: ABOUT US || */ 
-.gt-section1-content, 
+.gt-intro-content, 
 .gt-about-content {
     font-size: 14px;
     letter-spacing: -0.1px;
@@ -103,14 +103,14 @@
 
 .gt-rcm-list {
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;  
 }
 
 .gt-rcm-item {
-    width: 100%;
+    width: 75px;
     height: 75px;
     border: 0.2px solid #FDFDF970;
     display: flex;
@@ -146,26 +146,26 @@
         font-size: 24px;
     }
     /* SECTION 1 */
-    .gt-section1 {
+    .gt-intro {
         padding: 0px 50px 0px;
     }
 
-    .gt-section1-bg {
+    .gt-intro-bg {
         border-radius: 15px;
         height: 550px;
     }
 
-    .gt-section1-cover {
+    .gt-intro-cover {
         background-color: #0C0C0C70;
         padding: 130px 60px 60px 40px;
         height: 550px;
     }
 
-    .gt-section1-title {
+    .gt-intro-title {
         font-size: 42px;
     }
 
-    .gt-section1-content {
+    .gt-intro-content {
         font-size: 22px;
     }
     /* SECTION 2: ABOUT US || */ 
@@ -231,25 +231,25 @@
     }
 
     /* SECTION 1 */
-    .gt-section1 {
+    .gt-intro {
         padding: 0px 100px 0px;
     }
 
-    .gt-section1-bg {
+    .gt-intro-bg {
         border-radius: 20px;
         height: 600px;
     }
 
-    .gt-section1-cover {
+    .gt-intro-cover {
         padding: 190px 60px 60px 60px;
         height: 600px;
     }
 
-    .gt-section1-title {
+    .gt-intro-title {
         font-size: 48px;
     }
 
-    .gt-section1-content {
+    .gt-intro-content {
         margin-top: 40px;
         padding-right: 250px;
         font-size: 24px;
@@ -269,7 +269,7 @@
     .gt-rcm {
         display: flex;
         flex-direction: row;
-        justify-content: flex-startc;
+        justify-content: flex-start;
         align-items: center;
         gap: 150px;
         margin: 30px 70px 0px;
@@ -277,7 +277,6 @@
 
     .gt-rcm-title {
         font-size: 20px;
-
     }
 
     .gt-rcm-item {
