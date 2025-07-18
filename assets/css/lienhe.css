@@ -15,92 +15,119 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.lh-container1 {
+.lh-container {
     background-color: var(--color-3);
-    padding: 0px 20px;
 }
 
-.lh-container1 img {
-  width: 60%;
+/* INTRO */
+.lh-intro-bg {  
+    background-image: url(../images/lienhe/head-bg.png);
+    background-size: 170%;
+    background-position: center;
+    width: 100%;
+    height: 150px;
 }
 
-.lh-h1 {
+.lh-intro-cover {
+    padding: 40px 10px 10px;
+    background-color: #0C0C0C90;
+    width: 100%;
+    height: 150px;
+}
+
+.lh-intro-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.25px;   
     color: var(--color-2);
-    font-size: 40px;
 }
 
-.lh-p1 {
+.lh-intro-content {
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    line-height: 1.5;
     color: var(--color-4);
-    font-weight: 100;
-    font-style: italic;
 }
 
-.lh-h2 {
+/* VIEW ON MAP */
+.lh-map-container {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.lh-map-title {
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.25px;   
     color: var(--color-2);
-    font-weight: 100;
-
 }
 
-.lh-map {
-    width: 340px;
-    height: 340px; 
+.lh-view-on-map {
+    margin-top: 5px;
+    width: 100%;
+    height: 340px;
+}
+
+.lh-ggmap {
     border-radius: 5px;
+    width: 100%;
+    height: 340px;
 }
 
-.lh-form-phan-hoi {
-  width: 360px;
-  margin: 40px 20px;
-  font-family: sans-serif;
+/* FEEDBACK FORM */
+/* NOTES: "fb" = feedback */
+.lh-fb-form-container {
+    background-color: var(--color-4);
+    margin-top: 15px;
+    padding: 20px;
+    width: 100%;
 }
 
-.lh-form-phan-hoi h2 {
-  color: #4cd3c2;
-  margin-bottom: 5px;
-  font-size: 24px;
+.lh-fb-title {
+    color: var(--color-2);
+    margin-bottom: 5px;
+    font-size: 24px;
 }
 
-.lh-form-phan-hoi .phu-de {
-  color: #888;
-  margin-bottom: 20px;
-  font-size: 14px;
+.lh-fb-content {
+    color: #0C0C0C50;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
-.lh-form-phan-hoi label {
-  display: block;
-  margin-top: 15px;
-  font-style: normal;
-  font-weight: bol;
+#lh-fb-form label {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight:550;
 }
 
-.lh-form-phan-hoi label span {
-  color: red;
-}
-
-.lh-form-phan-hoi input,
-.lh-form-phan-hoi textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  padding: 8px 0;
-  font-size: 14px;
-  box-sizing: border-box;
-  background: none;
+#lh-fb-form input,
+#lh-fb-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0C0C0C30;
+    padding: 8px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: none;
 }
 
 /*Mở rộng kích thước của khu vực Nội dung */
-.lh-form-phan-hoi textarea {
-  height: 80px;
-  resize: vertical;
+#lh-fb-form textarea {
+    height: 80px;
+    resize: vertical;
 }
 
-.lh-form-phan-hoi button {
-  margin-top: 25px;
-  width: 100%;
-  padding: 12px;
-  background: black;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
+#lh-fb-form button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background: var(--color-3);
+    color: var(--color-4);
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
 }
