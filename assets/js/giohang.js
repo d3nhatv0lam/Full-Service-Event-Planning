@@ -229,7 +229,7 @@ function loadCartPage() {
 }
 
 
-function addToCart(productID, rank) {
+function addToCart(productID, rank, label, product) {
     // kiểm tra xem đã có trong giỏ hàng chưa
     var found = DATABASE.cart.find(item => item.productID === productID && item.rank === rank);
     if (found) {
@@ -237,12 +237,13 @@ function addToCart(productID, rank) {
         return;
     }
     
-    if (!confirm("Bạn có chắc muốn thêm gói này vào giỏ hàng?")) {
+    if (!confirm(`Bạn có muốn thêm "${product} - Gói ${label}" vào giỏ hàng không?`)) {
         return;
     }
     // thêm vào giỏ hàng
     DATABASE.cart.push({ "productID": productID, "rank": rank });
     saveDatabase(DATABASE_NAME, DATABASE);
     alert("Đã thêm gói vào giỏ hàng!");
+    loadCartPage();
 }
 
