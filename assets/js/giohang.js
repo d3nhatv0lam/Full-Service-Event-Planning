@@ -121,10 +121,10 @@ function removeCartItem(productId,rank) {
         return !(item.productID === productId && item.rank === rank);
     });
     saveDatabase(DATABASE_NAME,DATABASE);
-    alert("đã xóa gói bạn chọn ra khỏi giỏ hàng!");
     // xóa xong thì load lại
     loadCartPage();
 }
+
 
 function castCartItemFromTemplate(item) {
     var smImgPath = DATABASE.product.imgPath;
@@ -191,6 +191,7 @@ function loadCartItem() {
 
         $section.find(".btn-remove").click(function(){
             removeCartItem($section.data("productid"),$section.data("rank"));
+            alert("Đã xóa gói bạn chọn ra khỏi giỏ hàng!");
         });
         $section.find(".booking-item").on("submit",function(e){
             var address = $section.find(".item-address input").val();
@@ -212,8 +213,9 @@ function loadCartItem() {
                 e.preventDefault();
                 return;
             }
-
+            
             alert("Đã đặt gói thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
+            removeCartItem($section.data("productid"),$section.data("rank"));
         });
 
         $giohangList.append($section);
