@@ -64,7 +64,7 @@ const database_template =
                     }
                 }
             },
-            sp003:{
+            sp004:{
                 name: "Sự Kiện Âm Nhạc",
                 image: "su-kien-am-nhac.jpg",
                 description: "Biến mỗi sân khấu thành một bữa tiệc âm thanh và ánh sáng - từ concert ngoài trời đến mini show trong nhà. Âm thanh, ánh sáng, nghệ sĩ và cảm xúc - tất cả hòa quyện trong một đêm đáng nhớ.",
@@ -229,15 +229,18 @@ function loadCartPage() {
 }
 
 
-function addToCart(productID, rank, label, product) {
+function addToCart(productID, rank) {
     // kiểm tra xem đã có trong giỏ hàng chưa
     var found = DATABASE.cart.find(item => item.productID === productID && item.rank === rank);
     if (found) {
         alert("Gói này đã có trong giỏ hàng!");
         return;
     }
+
+    var productName = DATABASE.product.list[productID].name;
+    var rankName = DATABASE.product.rank[rank].name;
     
-    if (!confirm(`Bạn có muốn thêm "${product} - Gói ${label}" vào giỏ hàng không?`)) {
+    if (!confirm(`Bạn có muốn thêm "${productName} - ${rankName}" vào giỏ hàng không?`)) {
         return;
     }
     // thêm vào giỏ hàng
