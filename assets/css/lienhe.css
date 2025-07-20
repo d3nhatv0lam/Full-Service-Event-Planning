@@ -115,7 +115,7 @@
     background: none;
 }
 
-/*Mở rộng kích thước của khu vực Nội dung */
+/* Mở rộng kích thước của khu vực Nội dung */
 #lh-fb-form textarea {
     height: 80px;
     resize: vertical;
