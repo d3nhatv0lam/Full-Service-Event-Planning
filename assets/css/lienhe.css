@@ -44,6 +44,8 @@
 
 .lh-intro-content {
     font-size: 12px;
+    font-style: italic;
+    font-weight: lighter;
     letter-spacing: -0.1px;
     line-height: 1.5;
     color: var(--color-4);
@@ -51,8 +53,7 @@
 
 /* VIEW ON MAP */
 .lh-map-container {
-    margin-top: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .lh-map-title {
@@ -100,7 +101,7 @@
     display: block;
     margin-top: 15px;
     font-style: normal;
-    font-weight:550;
+    font-weight: 550;
 }
 
 #lh-fb-form input,
@@ -121,8 +122,9 @@
 }
 
 #lh-fb-form button {
-    margin-top: 25px;
-    width: 100%;
+    display: block;
+    margin: 25px auto 0;
+    width: 60%;
     padding: 12px;
     background: var(--color-3);
     color: var(--color-4);
@@ -130,4 +132,108 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    /* INTRO */
+    .lh-intro-bg {  
+        background-size: cover;
+        background-position: calc(0px) calc(450px);
+        height: 200px;
+    }
+
+    .lh-intro-cover {
+        padding: 50px 20px 10px;
+        height: 200px;
+    }
+
+    .lh-intro-title {
+        font-size: 54px;
+    }
+
+    .lh-intro-content {
+        font-size: 20px;
+    }
+
+    /* VIEW ON MAP */
+    .lh-map-container {
+        display: block;
+        padding: 10px 30px 10px;
+    }
+
+    .lh-map-title {
+        margin-left: 30px;
+        font-size: 28px;
+    }
+
+    .lh-view-on-map {
+        margin: 10px auto;
+        height: 450px;
+    }
+
+    .lh-ggmap {
+        border-radius: 10px;
+        height: 450px;
+    }
+
+    /* FEEDBACK FORM */
+    /* NOTES: "fb" = feedback */
+    .lh-fb-form-container {
+        display: block;
+        background-color: var(--color-4);
+        margin: 0 auto;
+        padding: 20px 20%;
+    }
+
+    .lh-fb-title {
+        color: var(--color-2);
+        margin-bottom: 5px;
+        font-size: 32px;
+    }
+
+    .lh-fb-content {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* INTRO */
+    .lh-intro-bg {  
+        background-position: calc(0px) calc(750px);
+        height: 300px;
+    }
+
+    .lh-intro-cover {
+        padding: 120px 40px 10px;
+        height: 300px;
+    }
+
+    .lh-intro-title {
+        font-size: 60px;
+    }
+
+    .lh-intro-content {
+        font-size: 24px;
+    }
+
+    /* MAP AND FEEDBACK FORM */
+    .lh-map-and-fb-form {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: var(--color-4);
+    }
+
+    .lh-map-container,
+    .lh-fb-form-container {
+        flex: 1;
+    }
+
+    .lh-map-title {
+        display: none;
+    }
+
+        /* FEEDBACK FORM */
+    .lh-fb-form-container {
+        padding: 20px 10%;
+    }
 }
