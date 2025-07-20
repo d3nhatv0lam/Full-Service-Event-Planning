@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --color-1: #5810BE;
-    --color-2: #4FD5C8;
-    --color-3: #0C0C0C;
-    --color-4: #FDFDF9;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    box-shadow: none;
-    font-family: 'Montserrat', sans-serif;
-}
 /* ------------SECTION 1: COVER TRANG CHỦ------------ */
 .index-container {
     width: 100%;
@@ -146,6 +132,7 @@ i.tchu-line {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 80%;
 }
 
 .tchu-section3-container > div {
@@ -201,7 +188,7 @@ i.tchu-line {
 .tchu-section-4 {
     background-image: url(../images/home/background.png);
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: cover;
     background-position: center;
 }
 
@@ -217,7 +204,7 @@ i.tchu-line {
 
 .outstand-event-title > h3 {
     color: var(--color-2);
-    font-size: 30px;
+    font-size: 28px;
     margin-left: 8px;
     margin-top: 10px;
 }
@@ -236,12 +223,12 @@ i.tchu-line {
 }
 
 .outstand-event-text > h5 {
-    font-size: 21px;
+    font-size: 18px;
     color: var(--color-4);
 }
 
 .outstand-event-text > p {
-    font-size: 14px;
+    font-size: 11px;
     font-style: italic;
     font-weight: 200;
     color: var(--color-4);
@@ -282,7 +269,7 @@ i.tchu-line {
 
 /* ------------SECTION 5: REVIEW CỦA KHÁCH HÀNG------------ */
 .trangchu-customer-review {
-    background: var(--color-3);
+    background: var(--color-4);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -315,7 +302,7 @@ i.tchu-line {
 .tchu-section5-rating {
     width: 100%;
     text-align: center;
-    color: yellow;
+    color: #FFEB00;
     margin-bottom: 10px;
 }
 
@@ -324,13 +311,13 @@ i.tchu-line {
 }
 
 .feedback-content {
-    color: var(--color-4);
+    color: var(--color-3);
     text-align: justify;
 }
 
 .feedback-owner {
     margin: 10px 0 25px 0;
-    color: var(--color-4);
+    color: var(--color-3);
     font-weight: 700;
     font-size: 11px;
 }
@@ -632,15 +619,15 @@ i.tchu-line {
     /* ------------SECTION 5: REVIEW CỦA KHÁCH HÀNG------------ */
 
     .star-a {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .star-b {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .star-c {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .tchu-section5-title > h5{
@@ -649,6 +636,11 @@ i.tchu-line {
     }
 
     .tchu-section5-rating {
+        margin-bottom: 20px;
+    }
+
+    .feedback {
+        width: 75%;
         margin-bottom: 20px;
     }
 }
