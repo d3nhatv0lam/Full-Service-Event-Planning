@@ -40,7 +40,7 @@
     color: var(--color-4);
 }
 
-/* INTRO */
+/* SECTION 1: INTRO */
 .gt-intro {
     margin-bottom: 40px;
     margin-top: 20px;
@@ -145,7 +145,8 @@
     .gt-header-content {
         font-size: 24px;
     }
-    /* INTRO */
+    
+    /* SECTION 1: INTRO */
     .gt-intro {
         padding: 0px 50px 0px;
     }
@@ -168,6 +169,7 @@
     .gt-intro-content {
         font-size: 22px;
     }
+
     /* SECTION 2: ABOUT US || */ 
     .gt-about {
         display: flex;
@@ -230,7 +232,7 @@
         font-size: 28px;
     }
 
-    /* SECTION 1 */
+    /* SECTION 1: INTRO */
     .gt-intro {
         padding: 0px 100px 0px;
     }
@@ -254,6 +256,7 @@
         padding-right: 250px;
         font-size: 24px;
     }
+
     /* SECTION 2: ABOUT US || */ 
     .gt-about-title {
         font-size: 24px;
