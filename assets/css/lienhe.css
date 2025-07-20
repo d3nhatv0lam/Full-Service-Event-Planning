@@ -19,7 +19,7 @@
     background-color: var(--color-3);
 }
 
-/* INTRO */
+/* SECTION 1: INTRO */
 .lh-intro-bg {  
     background-image: url(../images/contact/head-bg.png);
     background-size: 170%;
@@ -51,7 +51,7 @@
     color: var(--color-4);
 }
 
-/* VIEW ON MAP */
+/* SECTION 2: VIEW ON MAP */
 .lh-map-container {
     padding: 20px;
 }
@@ -76,7 +76,7 @@
     height: 340px;
 }
 
-/* FEEDBACK FORM */
+/* SECTION 3: FEEDBACK FORM */
 /* NOTES: "fb" = feedback */
 .lh-fb-form-container {
     background-color: var(--color-4);
@@ -115,7 +115,7 @@
     background: none;
 }
 
-/*Mở rộng kích thước của khu vực Nội dung */
+/* Mở rộng kích thước của khu vực Nội dung */
 #lh-fb-form textarea {
     height: 80px;
     resize: vertical;
@@ -135,7 +135,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    /* INTRO */
+    /* SECTION 1: INTRO */
     .lh-intro-bg {  
         background-size: cover;
         background-position: calc(0px) calc(450px);
@@ -155,7 +155,7 @@
         font-size: 20px;
     }
 
-    /* VIEW ON MAP */
+    /* SECTION 2: VIEW ON MAP */
     .lh-map-container {
         display: block;
         padding: 10px 30px 10px;
@@ -176,7 +176,7 @@
         height: 450px;
     }
 
-    /* FEEDBACK FORM */
+    /* SECTION 3: FEEDBACK FORM */
     /* NOTES: "fb" = feedback */
     .lh-fb-form-container {
         display: block;
@@ -197,7 +197,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    /* INTRO */
+    /* SECTION 1: INTRO */
     .lh-intro-bg {  
         background-position: calc(0px) calc(750px);
         height: 300px;
@@ -216,7 +216,7 @@
         font-size: 24px;
     }
 
-    /* MAP AND FEEDBACK FORM */
+    /* DISPLAY --- MAP AND FEEDBACK FORM */
     .lh-map-and-fb-form {
         display: flex;
         flex-direction: row-reverse;
