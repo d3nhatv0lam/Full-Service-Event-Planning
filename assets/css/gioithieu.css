@@ -145,7 +145,7 @@
     .gt-header-content {
         font-size: 24px;
     }
-    /* SECTION 1 */
+    /* INTRO */
     .gt-intro {
         padding: 0px 50px 0px;
     }
@@ -157,7 +157,7 @@
 
     .gt-intro-cover {
         background-color: #0C0C0C70;
-        padding: 130px 60px 60px 40px;
+        padding: 120px 60px 60px 40px;
         height: 550px;
     }
 
