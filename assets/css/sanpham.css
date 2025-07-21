@@ -19,7 +19,7 @@
     padding: 10px;
 }
 .sanpham-header h1 {
-    font-size: 40px;
+    font-size: 48px;
 }
 .sanpham-header p {
     color: white;
@@ -56,6 +56,7 @@
 }
 .sanpham-box h2 {
     font-size: 20px;
+    font-size: clamp(20px, 2vw, 22px);
     color: #5810BE;
     text-align: center;
     margin-bottom: 5px;
@@ -81,7 +82,8 @@
 }
 .sanpham-element p {
     color: var(--color-4);
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: clamp(13px, 2vw, 16px);
     margin-bottom: 5px;
     padding: 0px 5px;
 }
@@ -99,14 +101,16 @@
     max-width: 150px;
     background-color: var(--color-1);
     color: var(--color-4);
-    font-size: 11px;
+    /* font-size: 11px; */
+    font-size: clamp(11px, 2vw, 12px);
     font-weight: bold;
     border-radius: 10px;
     padding: 5px;
 }
 .sanpham-goi:hover {
     cursor: pointer;
-    filter: brightness(0.75);
+    background-color: var(--color-2);
+    transition-duration: 200ms;
 }
 
 .fa-caret-up {
@@ -129,14 +133,24 @@
 }
 
 .justforbackground {
+    padding-bottom: 10px;
     background-image: url("../images/bg/bg-1.png");
     background-size: cover;
 }
 
 @media screen and (min-width:768px) {
+    .sanpham-header h1 {
+        font-size: 54px;
+    }
+    .sanpham-header p {
+        font-size: 20px;
+    }
+
     .sanpham-2goi {
+        width: 100%;
+        padding: 10px 20px;
         flex-direction: row;
-        gap: 10px;
+        gap: 30px;
     }
     .sanpham-1goi {
         flex: 1;
@@ -148,5 +162,29 @@
 
     .sanpham-box {
         width: 95%;
+    }
+
+    .sanpham-element p {
+    font-size: clamp(13px, 1.5vw, 18px);
+    }
+
+    .sanpham-goi {
+    font-size: clamp(11px, 1.25vw, 15px);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .sanpham-header h1 {
+        font-size: 60px;
+    }
+    .sanpham-header p {
+        font-size: 24px;
+    }
+
+    .sanpham-1goi h1 {
+        font-size: 34px;
+    }
+    .sanpham-1goi ul {
+        font-size: 20px;
     }
 }
