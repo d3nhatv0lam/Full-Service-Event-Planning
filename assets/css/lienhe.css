@@ -30,7 +30,7 @@
 
 .lh-intro-cover {
     padding: 40px 10px 10px;
-    background-color: #0C0C0C90;
+    background-color: #0C0C0C95;
     width: 100%;
     height: 150px;
 }
@@ -43,9 +43,9 @@
 }
 
 .lh-intro-content {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 200;
     letter-spacing: -0.1px;
     line-height: 1.5;
     color: var(--color-4);
@@ -198,14 +198,14 @@
 
 @media screen and (min-width: 1024px) {
     /* SECTION 1: INTRO */
-    .lh-intro-bg {  
-        background-position: calc(0px) calc(750px);
-        height: 300px;
+    .lh-intro-bg {
+        background-position: calc(0px) calc(650px);
+        height: 220px;
     }
 
     .lh-intro-cover {
-        padding: 120px 40px 10px;
-        height: 300px;
+        padding: 60px 40px 10px;
+        height: 220px;
     }
 
     .lh-intro-title {
