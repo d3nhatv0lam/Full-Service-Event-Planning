@@ -12,7 +12,7 @@
     <!-- Khi gộp sẽ xóa 2 dòng này đi  -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <!-- Copy nhớ đổi tên file CSS -->
-    <link rel="stylesheet" href="/assets/css/lienhe.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/lienhe.css" type="text/css">
 
     <!-- và thêm dòng này -->
     <!-- <link rel="stylesheet" href="./assets/css/style.min.css" type="text/css">    -->
@@ -59,40 +59,53 @@
     </header>
 
     <main>
-        <div class="lh-container1">
-            <img src="assets/images/lienhe/head-bg.png" alt="lienhe-head-img">
-            <h1 class="lh-h1">Liên hệ</h1>
-            <p class="lh-p1">
-                Nhu cầu của bạn – Chuyên môn của chúng tôi.
-                <br>
-                Hãy cùng nhau tạo nên một sự kiện không thể nào quên!
-            </p>
+        <div class="lh-container">
+            <div class="lh-intro">
+                <section class="lh-intro-bg"> 
+                    <div class="lh-intro-cover">
+                        <h1 class="lh-intro-title">Liên hệ</h1>
+                        <p class="lh-intro-content">
+                            Nhu cầu của bạn – Chuyên môn của chúng tôi.
+                            <br>
+                            Hãy cùng nhau tạo nên một sự kiện không thể nào quên!                        
+                        </p>
+                    </div>
+                </section>
+            </div>
 
-            <h2 class="lh-h2">Xem bản đồ</h2>
-            <iframe class="lh-map" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1917.0383923294971!2d105.76976539317471!3d10.030691610390791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883d2192b0f1%3A0x4c90a391d232ccce!2zVHLGsOG7nW5nIEPDtG5nIE5naOG7hyBUaMO0bmcgVGluIHbDoCBUcnV54buBbiBUaMO0bmcgKENUVSk!5e0!3m2!1svi!2s!4v1751816129877!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="lh-map-and-fb-form">
+                <div class="lh-map-container">
+                    <section class="lh-map">
+                        <h2 class="lh-map-title">Xem bản đồ</h2>
+                        <div class="lh-view-on-map">
+                            <iframe class="lh-ggmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1917.0383923294971!2d105.76976539317471!3d10.030691610390791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883d2192b0f1%3A0x4c90a391d232ccce!2zVHLGsOG7nW5nIEPDtG5nIE5naOG7hyBUaMO0bmcgVGluIHbDoCBUcnV54buBbiBUaMO0bmcgKENUVSk!5e0!3m2!1svi!2s!4v1751816129877!5m2!1svi!2s" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>                    
+                    </section>
+                </div>
+                <!-- NOTES: "fb" = feedback -->
+                <div class="lh-fb-form-container">
+                    <h2 class="lh-fb-title">Hãy để lại thông tin</h2>
+                    <p class="lh-fb-content">Chúng tôi sẽ sớm phản hồi bạn!</p>
+
+                    <form id="lh-fb-form">
+                        <label for="inputName">Họ và tên</label>
+                        <input type="text" id="inputName" placeholder="VD: Nguyen Van A" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="VD: evermontevents@abc.com" required>
+
+                        <label for="phone">Số điện thoại</label>
+                        <input type="text" id="phone" placeholder="VD: 0XXX XXX XXX" required>
+
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" required></textarea>
+
+                        <button type="submit">Gửi phản hồi</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
-
-        <div class="lh-form-phan-hoi">
-            <h2>Hãy để lại thông tin</h2>
-            <p class="phu-de">Chúng tôi sẽ sớm phản hồi bạn!</p>
-
-            <form id="formPhanHoi">
-                <label>Họ và tên<span>*</span></label>
-                <input type="text" placeholder="VD: Nguyen Van A" required>
-
-                <label>Email<span>*</span></label>
-                <input type="email" placeholder="VD: evermontevents@abc.com" required>
-
-                <label>Số điện thoại<span>*</span></label>
-                <input type="phone-nums" placeholder="VD: 0XXX XXX XXX" required>
-
-                <label>Nội dung<span>*</span></label>
-                <textarea required></textarea>
-
-                <button type="submit">Gửi phản hồi</button>
-            </form>
-        </div>
-
     </main>
 
     <footer class="footer">
@@ -141,19 +154,7 @@
         </div>
     </footer>
 
-    <script>
-        var toggle = document.getElementById("toggle");
-        var mainnav = document.getElementById("mainnav");
-        toggle.onclick = function(){
-            mainnav.classList.toggle('active');
-            document.querySelector('.inner-logo').classList.toggle('hide-when-menu-open');
-            document.querySelector('.inner-shopping-cart').classList.toggle('hide-when-menu-open');
-            document.querySelector('.inner-wrap').classList.toggle('inner-wrap-change');
-            document.querySelector('.inner-header-btn').classList.toggle('inner-header-btn-change');
-            document.querySelector('.fa-bars').classList.toggle('exchange-after-click');
-            document.querySelector('.fa-x').classList.toggle('exchange-after-click');
-            document.querySelector('.header').classList.toggle('active');
-        }
-    </script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/lienhe.js"></script>
 </body>
 </html>

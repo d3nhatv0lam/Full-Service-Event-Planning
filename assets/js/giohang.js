@@ -64,7 +64,7 @@ const database_template =
                     }
                 }
             },
-            sp003:{
+            sp004:{
                 name: "Sự Kiện Âm Nhạc",
                 image: "su-kien-am-nhac.jpg",
                 description: "Biến mỗi sân khấu thành một bữa tiệc âm thanh và ánh sáng - từ concert ngoài trời đến mini show trong nhà. Âm thanh, ánh sáng, nghệ sĩ và cảm xúc - tất cả hòa quyện trong một đêm đáng nhớ.",
@@ -121,10 +121,10 @@ function removeCartItem(productId,rank) {
         return !(item.productID === productId && item.rank === rank);
     });
     saveDatabase(DATABASE_NAME,DATABASE);
-    alert("đã xóa gói bạn chọn ra khỏi giỏ hàng!");
     // xóa xong thì load lại
     loadCartPage();
 }
+
 
 function castCartItemFromTemplate(item) {
     var smImgPath = DATABASE.product.imgPath;
@@ -191,6 +191,7 @@ function loadCartItem() {
 
         $section.find(".btn-remove").click(function(){
             removeCartItem($section.data("productid"),$section.data("rank"));
+            alert("Đã xóa gói bạn chọn ra khỏi giỏ hàng!");
         });
         $section.find(".booking-item").on("submit",function(e){
             var address = $section.find(".item-address input").val();
@@ -212,8 +213,9 @@ function loadCartItem() {
                 e.preventDefault();
                 return;
             }
-
+            
             alert("Đã đặt gói thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
+            removeCartItem($section.data("productid"),$section.data("rank"));
         });
 
         $giohangList.append($section);
@@ -236,13 +238,17 @@ function addToCart(productID, rank) {
         alert("Gói này đã có trong giỏ hàng!");
         return;
     }
+
+    var productName = DATABASE.product.list[productID].name;
+    var rankName = DATABASE.product.rank[rank].name;
     
-    if (!confirm("Bạn có chắc muốn thêm gói này vào giỏ hàng?")) {
+    if (!confirm(`Bạn có muốn thêm "${productName} - ${rankName}" vào giỏ hàng không?`)) {
         return;
     }
     // thêm vào giỏ hàng
     DATABASE.cart.push({ "productID": productID, "rank": rank });
     saveDatabase(DATABASE_NAME, DATABASE);
     alert("Đã thêm gói vào giỏ hàng!");
+    loadCartPage();
 }
 
