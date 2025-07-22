@@ -7,13 +7,17 @@
 
 
 .dangnhap-main {
-    display: flex;
     min-height: 80vh;
     align-items: center;
-    justify-content: center;
-    background: url(../images/bg/bg-1.png) no-repeat;
-    background-size: cover;
+    background: url(../images/home/background.png) no-repeat;
     padding: 20px;
+    background-color: #0C0C0C10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -29,7 +33,7 @@
 }
 
 .dangnhap-wrapper h2 {
-    font-size: 34px;
+    font-size: 36px;
     text-align: center;
     padding: 5px 0 20px 0;
     color: var(--color-2);
@@ -46,13 +50,14 @@
     font-size: 12px;
     color: white;
     padding: 10px;
-    margin: 10px 10px 10px 5px;
+    margin: 10px 10px 10px 0;
     transition: .2s ease;
 }
 
 .dangnhap-input-box label {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 .dangnhap-input-box ::placeholder {
@@ -67,7 +72,7 @@
     border: none;
     outline: none;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 14px;
     color: white;
     margin: 20px 10px 10px 5px;
     font-weight: 600;
@@ -77,6 +82,7 @@
 .dangnhap-submit:hover {
     background: var(--color-2);
 }
+
 .dangnhap-input-box label {
     color: var(--color-4);
     font-weight: 550;
@@ -89,8 +95,8 @@
     gap: 10px;
     align-items: center;
     color: white;
-    font-size: small;
-    margin: 10px 0 0 10px;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 
@@ -98,7 +104,7 @@
 .logn-in-link {
     color: var(--color-4);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -106,30 +112,72 @@
     color: var(--color-2);
 }
 
-/* @media only screen and (max-width: 768px) {
-    .dangnhap-wrapper{
-        min-height: 100%;
-        margin: 40px;
-    }
-
-    .dangnhap-wrapper .dangnhap-2col {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        font-size: medium;
+@media only screen and (min-width: 768px) {
+    .dangnhap-wrapper {
+        width: 415px;
+        padding: 40px 30px;
     }
 
     .dangnhap-wrapper h2 {
-        font-size: 33px;
+        font-size: 38px;
     }
 
     .dangnhap-input-box .field {
-        width: 100%;
-        padding: 0 10px 0 30px;
-        height: 50px;
+        font-size: 16px;
     }
 
-    .logn-in-link {
-        font-size: medium;
+    .dangnhap-input-box label {
+        font-size: 16px;
     }
-} */
+
+    .dangnhap-input-box ::placeholder {
+        font-size: 13px;
+    }
+
+    .dangnhap-submit{
+        font-size: 16px;
+    }
+    
+    .logn-in-link{
+        font-size: 14px;
+    }
+
+    .dangnhap-2col{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .dangnhap-wrapper {
+        width: 450px;
+        padding: 50px 40px;
+    }
+
+    .dangnhap-wrapper h2 {
+        font-size: 40px;
+    }
+
+    .dangnhap-input-box .field {
+        font-size: 18px;
+    }
+
+    .dangnhap-input-box label {
+        font-size: 18px;
+    }
+
+    .dangnhap-input-box ::placeholder {
+        font-size: 14px;
+    }
+
+    .dangnhap-submit{
+        font-size: 18px;
+    }
+    
+    .logn-in-link{
+        font-size: 16px;
+    }
+
+    .dangnhap-2col{
+        font-size: 16px;
+    }
+}
