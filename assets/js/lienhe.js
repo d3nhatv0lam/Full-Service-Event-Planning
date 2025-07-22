@@ -8,14 +8,14 @@ function isValidPhone(phone) {
 }
 
 
-//Email có format là @gamil.com
+//Email có format là abc@xyz.tmn
 function isValidGmail(email) {
-    return /^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email.trim());
+    return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.trim());
 }
 
 // Đảm bảo không bỏ trống Nội dung
 function isValidMessage(msg) {
-    return msg.trim().length > 0;
+    return msg.trim().length > 10;
 }
 
 document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
