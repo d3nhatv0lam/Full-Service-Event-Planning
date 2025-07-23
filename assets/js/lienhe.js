@@ -33,7 +33,7 @@ document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
     }
 
     if (!isValidGmail(email)) {
-        errors.push("Email phải có đuôi là @gmail.com");
+        errors.push("Email không hợp lệ");
     }
 
     if (!isValidPhone(phone)) {
@@ -41,7 +41,7 @@ document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
     }
 
     if (!isValidMessage(message)) {
-        errors.push("Nội dung không được để trống");
+        errors.push("Nội dung phản hồi quá ngắn!");
     }
 
     if (errors.length > 0) {
