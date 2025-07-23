@@ -7,7 +7,6 @@ function isValidPhone(phone) {
     return /^(0|\+84)\d{9}$/.test(phone.trim());
 }
 
-
 //Email có format là abc@xyz.tmn
 function isValidGmail(email) {
     return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.trim());
@@ -18,37 +17,40 @@ function isValidMessage(msg) {
     return msg.trim().length > 10;
 }
 
-document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // Không cho gửi form nếu có lỗi
+document.addEventListener("DOMContentLoaded", () => {
+    // Chỉ thực hiện khi form phản hồi có tồn tại
+    if (document.getElementById('lh-fb-form') == null) return;
 
-    const inputName = document.getElementById("inputName").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
+    document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    let errors = [];
+        const inputName = document.getElementById("inputName").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
 
-    if (!isValidName(inputName)) {
-        errors.push("Họ và tên không được chứa số và các ký tự đặc biệt");
-    }
+        let errors = [];
 
-    if (!isValidGmail(email)) {
-        errors.push("Email không hợp lệ");
-    }
+        if (!isValidName(inputName)) {
+            errors.push("Họ và tên không được chứa số và ký tự đặc biệt");
+        }
 
-    if (!isValidPhone(phone)) {
-        errors.push("Số điện thoại không hợp lệ");
-    }
+        if (!isValidGmail(email)) {
+            errors.push("Email không hợp lệ");
+        }
 
-    if (!isValidMessage(message)) {
-        errors.push("Nội dung phản hồi quá ngắn!");
-    }
+        if (!isValidPhone(phone)) {
+            errors.push("Số điện thoại không hợp lệ");
+        }
 
-    if (errors.length > 0) {
-        alert("Vui lòng kiểm tra lại: \n- " + errors.join("\n- "));
-    } 
-    
-    else {
-        alert("Gửi phản hồi thành công!");
-    }
+        if (!isValidMessage(message)) {
+            errors.push("Nội dung phản hồi quá ngắn!");
+        }
+
+        if (errors.length > 0) {
+            alert("Vui lòng kiểm tra lại:\n- " + errors.join("\n- "));
+        } else {
+            alert("Gửi phản hồi thành công!");
+        }
+    });
 });
