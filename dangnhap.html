@@ -60,20 +60,21 @@
 
     <main class="dangnhap-main">
         <div class="dangnhap-wrapper">
-            <form action="">
+
+            <form id="dn-form">
                 <h2>Đăng nhập</h2>
                 <div class="dangnhap-input-box">
-                    <label>Tên tài khoản</label>
-                    <input type="text" class="field" placeholder="Nhập tên của bạn" required>
+                    <label for="inputName">Tên tài khoản</label>
+                    <input type="text" class="field" id="inputName" placeholder="Nhập tên tài khoản" required>
                 </div>
 
                 <div class="dangnhap-input-box">
-                    <label>Mật khẩu</label>
-                    <input type="password" class="field" placeholder="Nhập mật khẩu" required>
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" class="field" id="password" placeholder="Nhập mật khẩu" required>
                 </div>
 
                 <div class="dangnhap-input-box">
-                    <input type="submit" class="dangnhap-submit" value="Đăng Nhập">
+                    <button type="submit" class="dangnhap-submit">Đăng Nhập</button>
                 </div>
 
 
@@ -138,6 +139,6 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/dangnhap.js"></script>
 </body>
-
 </html>

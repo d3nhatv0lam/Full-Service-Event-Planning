@@ -76,6 +76,7 @@
     margin: 20px 10px 10px 5px;
     font-weight: 600;
     transition: .2s ease;
+    cursor: pointer;
 }
 
 .dangnhap-submit:hover {

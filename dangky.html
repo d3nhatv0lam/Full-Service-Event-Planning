@@ -61,37 +61,36 @@
 
     <main class="dangky-main">
         <div class="dangky-wrapper">
-            <form action="">
+
+            <form id="dk-form">
                 <h2 class="dangky-title">Đăng Ký</h2>
                 <div class="dangky-input-box">
-                    <label>Họ và Tên</label>
-                    <input type="text" class="field" placeholder="Nhập tên của bạn">
+                    <label for="inputName">Tên đăng nhập</label>
+                    <input type="text" class="field" id="inputName" placeholder="Nhập tên đăng nhập" required>
                 </div>
 
                 <div class="dangky-input-box">
-                    <label>Số điện thoại</label>
-                    <input type="text" class="field" placeholder="Nhập số điện thoại">
+                    <label for="email">Địa chỉ Email</label>
+                    <input type="text" class="field" id="email" placeholder="Nhập email của bạn" required>
                 </div>
 
                 <div class="dangky-input-box">
-                    <label>Địa chỉ Email</label>
-                    <input type="text" class="field" placeholder="Nhập email của bạn">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" class="field" id="phone" placeholder="Nhập số điện thoại" required>
                 </div>
 
                 <div class="dangky-input-box">
-                    <label>Mật khẩu</label>
-                    <input type="password" class="field" placeholder="Nhập mật khẩu">
+                    <label for="phone">Mật khẩu</label>
+                    <input type="password" class="field" id="password" placeholder="Nhập mật khẩu" required>
                 </div>
 
                 <div class="dangky-input-box">
-                    <input type="submit" class="dangky-submit" value="Đăng Ký">
+                    <button type="submit" class="dangky-submit">Đăng Ký</button>
                 </div>
 
                 <div class="dangky-logreg">
                     <p>Đã có tài khoản? <a href="dangnhap.html" class="sign-up-link">Đăng nhập</a></p>
                 </div>
-
-
 
             </form>
         </div>
@@ -144,5 +143,6 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/dangky.js"></script>
 
 </html>
