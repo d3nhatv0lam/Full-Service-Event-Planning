@@ -33,9 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let errors = [];
 
-        if (!isValidName(inputName)) {
-            errors.push("Tên tài khoản không hợp lệ");
-        }   
+        if (inputName.length < 4) {
+            errors.push("Tên tài khoản phải có ít nhất 4 ký tự!");
+
+        } else if (!isValidName(inputName)) {
+            errors.push("Tên tài khoản không được chứa ký tự đặt biệt hoặc khoảng trắng!");
+        }
 
         if (!isValidGmail(email)) {
             errors.push("Gmail không hợp lệ!");
@@ -45,8 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
             errors.push("Số điện thoại không hợp lệ!");
         }
 
-        if (!isValidPass(pass)) {
-            errors.push("Mật khẩu không hợp lệ")
+        if (pass.length < 8) {
+            errors.push("Mật khẩu phải có ít nhất 8 ký tự!")
+        }
+        else if (!isValidPass(pass)) {
+            errors.push("Mật khẩu không có khoảng trắng, phải chứa ít 1 ký tự in hoa, 1 ký tự đặt biệt và 1 chữ số!");
         }
 
         if (errors.length > 0) {
