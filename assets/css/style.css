@@ -80,6 +80,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
 
 .header-container .inner-menu .mainnav > ul > li{
     margin-left: 23px;
+
 }
 
 .header-container .inner-menu .mainnav > ul > li > a{
@@ -111,6 +112,7 @@ Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng t
     text-align: center;
     margin-left: 0px;
     margin-bottom: 24px;
+    list-style: none;
 }
 
 .hide-when-menu-open{

@@ -64,6 +64,7 @@
 .tchu-btn:hover{
     background-color: var(--color-2);
     transition-duration: 200ms;
+    cursor: pointer;
 }
 
 /* ------------SECTION 2: TÓM TẮT VỀ CÔNG TY------------ */
@@ -185,7 +186,7 @@ i.tchu-line {
 }
 /* ------------SECTION 4: SỰ KIỆN NỔI BẬT------------ */
 .tchu-section-4 {
-    background-image: url(../images/home/background.png);
+    background-image: url(../images/bg/product.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -264,6 +265,7 @@ i.tchu-line {
 .tchu-section4-consult-btn:hover {
     background-color: var(--color-1);
     transition-duration: 200ms;
+    cursor: pointer;
 }
 
 /* ------------SECTION 5: REVIEW CỦA KHÁCH HÀNG------------ */
