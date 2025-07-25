@@ -13,7 +13,7 @@
 }
 
 .trangchu-cover {
-    background-color: #5810BE45;
+    background-color: #5810be50;
     height: 225px;
     width: 100%;
     padding: 20px;
@@ -30,6 +30,7 @@
     color: var(--color-2);
     margin-bottom: 15px;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .layer-img {
@@ -38,9 +39,9 @@
 
 .tchu-section1-text2 > p{
     color: var(--color-4);
-    margin-bottom: 15px;
+    margin: 20px 0 15px 0;
     font-style: italic;
-    font-weight: 100;
+    font-weight: 250;
     font-size: 12px;
 }
 
@@ -332,6 +333,7 @@ i.tchu-line {
 
     .tchu-section1-text1 > p{
         color: var(--color-2);
+        margin-top: 60px;
         margin-bottom: 30px;
         font-size: 28px;
     }
@@ -502,12 +504,13 @@ i.tchu-line {
 @media screen and (min-width: 1024px){
      /* ------------SECTION 1: COVER TRANG CHỦ------------ */
     .trangchu-cover {
-        height: 510px;
+        height: 650px;
         padding: 25px;
     }
     .tchu-section1-text1 > p{
         color: var(--color-2);
-        margin-bottom: 30px;
+        margin-top: 135px;
+        margin-bottom: 50px;
         font-size: 35px;
     }
 
