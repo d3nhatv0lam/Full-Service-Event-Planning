@@ -23,12 +23,11 @@
 .dangnhap-wrapper {
     width: 380px;
     color: var(--color-3);
-    background: rgba(0, 0, 0, 0.7);
-    border: 4px solid;
-    border-radius: 10px;
+    background: #0c0c0cc0;
+    border: 3.5px solid;
     border-image: linear-gradient(45deg, var(--color-1), var(--color-2)) 1;
     padding: 20px 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px #0C0C0C90;
 }
 
 .dangnhap-wrapper h2 {
@@ -47,13 +46,13 @@
 .dangnhap-input-box .field {
     width: 100%;
     height: 48px;
-    background: rgba(255, 255, 255, 0.25);
+    background: #FDFDF930;
     border: none;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid var(--color-4);
     border-radius: 20px;
     font-size: 12px;
-    color: white;
+    color: var(--color-4);
     padding: 10px;
     margin: 10px 10px 10px 0;
     transition: .2s ease;
@@ -67,12 +66,12 @@
 .dangnhap-submit {
     width: 100%;
     height: 48px;
-    background: rgba(88, 16, 190);
+    background: var(--color-1);
     border: none;
     outline: none;
     border-radius: 25px;
     font-size: 14px;
-    color: white;
+    color: var(--color-4);
     margin: 20px 10px 10px 5px;
     font-weight: 600;
     transition: .2s ease;
@@ -94,7 +93,7 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    color: white;
+    color: var(--color-4);
     font-size: 12px;
     margin-top: 10px;
 }
