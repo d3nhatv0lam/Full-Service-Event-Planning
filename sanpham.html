@@ -69,7 +69,7 @@
             <div class="justforbackground">
                 <section class="sanpham-2goi">
                     <div class="sanpham-1goi">
-                        <h1>1. Gói cơ bản</h1>
+                        <h1>1. Gói tiêu chuẩn</h1>
                         <ul>
                             <li>Tư vấn và lên kế hoạch sự kiện cơ bản</li>
                             <li>Thiết kế, bố trí không gian tiêu chuẩn</li>
@@ -91,14 +91,14 @@
                     <div class="sanpham-box">
                         <h2>Hội Thảo</h2>
                         <div class="sanpham-element">
-                            <img src="assets/images/product/hoi-thao.jpg">
+                            <img src="assets/images/product/hoi-thao.jpg" onclick="zoomImage(this)">
                             <p>
                                 Tổ chức hội thảo chuyên nghiệp với không gian sang trọng, thiết bị hiện đại và đội ngũ điều phối giàu kinh nghiệm. 
                                 Phù hợp với các buổi tọa đàm, đào tạo nội bộ hay hội nghị quy mô lớn.
                             </p>
                             <div class="sanpham-mucgia">
                                 <div class="sanpham-goi" data-productId="sp001" data-rank="standard">
-                                    <div class="label">CƠ BẢN</div>
+                                    <div class="label">TIÊU CHUẨN</div>
                                     <div class="price">15.000.000 VNĐ</div>
                                 </div>
                                 <div class="sanpham-goi" data-productId="sp001" data-rank="advance">
@@ -111,14 +111,14 @@
                     <div class="sanpham-box">
                         <h2>Lễ Kỷ Niệm</h2>
                         <div class="sanpham-element">
-                            <img src="assets/images/product/le-ky-niem.jpg">
+                            <img src="assets/images/product/le-ky-niem.jpg" onclick="zoomImage(this)">
                             <p>
                                 Đánh dấu các cột mốc đáng nhớ bằng những buổi lễ kỷ niệm trang trọng, ấm cúng và đầy ý nghĩa - 
                                 từ sinh nhật công ty, lễ thành lập, đến các ngày lễ tri ân đối tác và nhân viên.
                             </p>
                             <div class="sanpham-mucgia">
                                 <div class="sanpham-goi" data-productId="sp002" data-rank="standard">
-                                    <div class="label">CƠ BẢN</div>
+                                    <div class="label">TIÊU CHUẨN</div>
                                     <div class="price">10.000.000 VNĐ</div>
                                 </div>
                                 <div class="sanpham-goi" data-productId="sp002" data-rank="advance">
@@ -131,14 +131,14 @@
                     <div class="sanpham-box">
                         <h2>Sự Kiện Khai Trương</h2>
                         <div class="sanpham-element">
-                            <img src="assets/images/product/su-kien-khai-truong.jpg">
+                            <img src="assets/images/product/su-kien-khai-truong.jpg" onclick="zoomImage(this)">
                             <p>
                                 Gây ấn tượng ngay từ ngày đầu với lễ khai trương được thiết kế chỉn chu, mang bản sắc thương hiệu. 
                                 Kết hợp truyền thông, nghệ thuật biểu diễn và trải nghiệm khách mời đẳng cấp.
                             </p>
                             <div class="sanpham-mucgia">
                                 <div class="sanpham-goi" data-productId="sp003" data-rank="standard">
-                                    <div class="label">CƠ BẢN</div>
+                                    <div class="label">TIÊU CHUẨN</div>
                                     <div class="price">20.000.000 VNĐ</div>
                                 </div>
                                 <div class="sanpham-goi" data-productId="sp003" data-rank="advance">
@@ -151,14 +151,14 @@
                     <div class="sanpham-box">
                         <h2>Sự Kiện Âm Nhạc</h2>
                         <div class="sanpham-element">
-                            <img src="assets/images/product/su-kien-am-nhac.jpg">
+                            <img src="assets/images/product/su-kien-am-nhac.jpg" onclick="zoomImage(this)">
                             <p>
                                 Biến mỗi sân khấu thành một bữa tiệc âm thanh và ánh sáng - từ concert ngoài trời đến mini show trong nhà. 
                                 Âm thanh, ánh sáng, nghệ sĩ và cảm xúc - tất cả hòa quyện trong một đêm đáng nhớ.
                             </p>
                             <div class="sanpham-mucgia">
                                 <div class="sanpham-goi" data-productId="sp004" data-rank="standard">
-                                    <div class="label">CƠ BẢN</div>
+                                    <div class="label">TIÊU CHUẨN</div>
                                     <div class="price">25.000.000 VNĐ</div>
                                 </div>
                                 <div class="sanpham-goi" data-productId="sp004" data-rank="advance">
@@ -219,17 +219,10 @@
         </div>
     </footer>
 
-    <div class="modal-overlay" id="modal">
-        <div class="modal-content">
-            <p id="modal-message">
-                Bạn có chắc muốn thêm gói này vào giỏ hàng không?
-            </p>
-            <div class="modal-buttons">
-                <button id="modal-yes">Có</button>
-                <button id="modal-no">Không</button>
-            </div>
-        </div>
+    <div id="lightbox" onclick="closeLightbox()">
+        <img src="" alt="Phóng to ảnh">
     </div>
+
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/giohang.js"></script>

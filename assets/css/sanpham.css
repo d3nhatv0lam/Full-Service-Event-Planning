@@ -55,8 +55,7 @@
     margin: 10px auto;
 }
 .sanpham-box h2 {
-    font-size: 20px;
-    font-size: clamp(20px, 2vw, 22px);
+    font-size: clamp(20px, 4vw, 24px);
     color: #5810BE;
     text-align: center;
     margin-bottom: 5px;
@@ -70,6 +69,7 @@
     text-align: center;
     background-color: var(--color-3);
     border-radius: 5px;
+    overflow: hidden;
 }
 .sanpham-element img {
     display: block;
@@ -79,10 +79,14 @@
     padding: 10px 10px 0px 10px;
     margin-bottom: 5px;
     border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+.sanpham-element img:hover {
+    transform: scale(1.01);
+    cursor: zoom-in;
 }
 .sanpham-element p {
     color: var(--color-4);
-    /* font-size: 13px; */
     font-size: clamp(13px, 2vw, 16px);
     margin-bottom: 5px;
     padding: 0px 5px;
@@ -113,30 +117,43 @@
     transition-duration: 200ms;
 }
 
-.fa-caret-up {
-    color: var(--color-2);
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: auto;
-    background-color: var(--color-2);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    border-radius: 5px;
-    padding: 5px;
-}
-
 .justforbackground {
     padding-bottom: 10px;
     background-image: url("../images/bg/bg-1.png");
     background-size: cover;
 }
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+#lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(88, 16, 190, 0.3);
+  animation: zoomIn 0.5s ease;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 @media screen and (min-width:768px) {
     .sanpham-header h1 {
@@ -148,7 +165,7 @@
 
     .sanpham-2goi {
         width: 100%;
-        padding: 10px 20px;
+        padding: 10px 40px;
         flex-direction: row;
         gap: 30px;
     }
@@ -158,10 +175,14 @@
 
     .sanpham-list {
         grid-template-columns: 1fr 1fr;
+        padding: 0px 20px;
     }
 
     .sanpham-box {
         width: 95%;
+    }
+    .sanpham-box h2 {
+        font-size: clamp(20px, 2.25vw, 24px);
     }
 
     .sanpham-element p {
@@ -170,6 +191,11 @@
 
     .sanpham-goi {
     font-size: clamp(11px, 1.25vw, 15px);
+    }
+
+    #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
     }
 }
 
@@ -181,10 +207,18 @@
         font-size: 24px;
     }
 
+    .sanpham-2goi {
+        padding: 10px 60px;
+    }
+
     .sanpham-1goi h1 {
         font-size: 34px;
     }
     .sanpham-1goi ul {
         font-size: 20px;
+    }
+
+    .sanpham-list {
+        padding: 0px 40px;
     }
 }
