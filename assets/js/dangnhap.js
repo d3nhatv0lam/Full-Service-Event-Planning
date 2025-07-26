@@ -3,19 +3,20 @@ function isValidName(inputName) {
     return /^[a-z0-9]{4,}$/.test(inputName.trim());
 }
 
-//Ít nhất có 1 chữ cái in hoa, 1 chữ số, 1 ký tự đặt biệt, không khoảng trắng và tối thiểu 8 ký tự
+//Ít nhất có 1 chữ cái in hoa,1 chữ thường 1 chữ số, không khoảng trắng và tối thiểu 8 ký tự
 function isValidPass(pass) {
     return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])\S{8,}$/.test(pass.trim());
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
+    loadDangNhapPage();
+});
+
+function loadDangNhapPage() {
     // Chỉ thực hiện khi form phản hồi có tồn tại
     if (document.getElementById('dn-form') == null) return;
 
     document.getElementById("dn-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
         const inputName = document.getElementById("inputName").value;
         const pass = document.getElementById("password").value;
 
@@ -37,10 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (errors.length > 0) {
             alert("Vui lòng kiểm tra lại: \n- " + errors.join("\n- "));
+            e.preventDefault();
         }
 
         else {
             alert("Đăng nhập thành công!");
         }
     });
-});
+}

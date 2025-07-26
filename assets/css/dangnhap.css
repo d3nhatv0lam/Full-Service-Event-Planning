@@ -1,14 +1,7 @@
-:root {
-    --color-1: #5810be;
-    --color-2: #4fd5c8;
-    --color-3: #000000;
-    --color-4: #FDFDF9;
-}
-
 .dangnhap-main {
     min-height: 80vh;
     align-items: center;
-    background: url(../images/home/background.png) no-repeat;
+    background: url(../images/bg/background.png) no-repeat;
     padding: 20px;
     background-color: #0C0C0C10;
     display: flex;

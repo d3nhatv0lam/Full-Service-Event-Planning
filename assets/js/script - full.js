@@ -1,3 +1,4 @@
+// hàm dùng chung //
 const database_template =
 {
     product: {
@@ -80,6 +81,9 @@ const database_template =
     cart: []
 }
 
+const DATABASE_NAME = 'database';
+var DATABASE = getOrInitDatabase();
+
 function getOrInitDatabase(database = DATABASE_NAME) {
     // không có trong localStorage thì thêm vào
     if (typeof localStorage[database] === "undefined")
@@ -94,16 +98,68 @@ function saveDatabase(databaseName = DATABASE_NAME,database) {
 function resetDatabase(databaseName = DATABASE_NAME) {
     localStorage.setItem(databaseName, JSON.stringify(database_template));
     DATABASE = getOrInitDatabase(databaseName);
-    loadCartPage();
 }
 
-const DATABASE_NAME = 'database';
-var DATABASE = getOrInitDatabase();
+// toggle menu
+var toggle = document.getElementById("toggle");
+var mainnav = document.getElementById("mainnav");
+toggle.onclick = function(){
+    mainnav.classList.toggle('active');
+    document.querySelector('.inner-logo').classList.toggle('hide-when-menu-open');
+    document.querySelector('.inner-shopping-cart').classList.toggle('hide-when-menu-open');
+    document.querySelector('.inner-wrap').classList.toggle('inner-wrap-change');
+    document.querySelector('.inner-header-btn').classList.toggle('inner-header-btn-change');
+    document.querySelector('.fa-bars').classList.toggle('exchange-after-click');
+    document.querySelector('.fa-x').classList.toggle('exchange-after-click');
+    document.querySelector('.header').classList.toggle('active');
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+// hàm kiểm tra của riêng Liên hệ
+function isValidLienHeName(inputName) {
+    return /^[A-Za-zÀ-Ỹà-ỹ\s]+$/.test(inputName.trim());
+}
+
+// Đảm bảo sđt có 10 chữ số 
+function isValidPhone(phone) {
+    return /^(0|\+84)\d{9}$/.test(phone.trim());
+}
+
+//Email có format là abc@xyz.tmn
+function isValidGmail(email) {
+    return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.trim());
+}
+
+// Đảm bảo không bỏ trống Nội dung
+function isValidMessage(msg) {
+    return msg.trim().length > 10;
+}
+
+//Chỉ cho phép chữ cái tiếng Anh thường và chữ số, tối thiểu 4 ký tự
+function isValidName(inputName) {
+    return /^[a-z0-9]{4,}$/.test(inputName.trim());
+}
+
+//Ít nhất có 1 chữ cái in hoa,1 chữ thường 1 chữ số, không khoảng trắng và tối thiểu 8 ký tự
+function isValidPass(pass) {
+    return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])\S{8,}$/.test(pass.trim());
+}
+
+
+// lời gọi tổng quát
+document.addEventListener("DOMContentLoaded", function() {
     loadCartPage();
+    loadSanPhamPage();
+    loadLienHePage();
+    loadDangNhapPage();
+    loadDangKyPage();
 });
 
+// giohang
+function loadCartPage() {
+    // trang giỏ hàng
+    if (document.getElementById("giohang") == null) return;
+    loadCartItem();
+}
 
 function removeCartItem(productId,rank) {
     DATABASE.cart = DATABASE.cart.filter(item => {
@@ -113,7 +169,6 @@ function removeCartItem(productId,rank) {
     // xóa xong thì load lại
     loadCartPage();
 }
-
 
 function castCartItemFromTemplate(item) {
     var smImgPath = DATABASE.product.imgPath;
@@ -165,6 +220,7 @@ function castCartItemFromTemplate(item) {
 function loadCartItem() {
     var $giohangList = $("#giohangList");
     if ($giohangList.length === 0) return;
+
     $giohangList.html("");
     // load gio hang
     DATABASE.cart.forEach(item => {
@@ -198,7 +254,7 @@ function loadCartItem() {
                 return;
             }
             if (!date) {
-                alert("Ngày bắt đầu sự kiện không được để trống!");
+                alert("Ngày tổ chức sự kiện không được để trống!");
                 e.preventDefault();
                 return;
             }
@@ -206,15 +262,23 @@ function loadCartItem() {
             alert("Đã đặt gói thành công.\nChúng tôi sẽ sớm liên hệ với bạn để lấy thêm thông tin!");
             removeCartItem($section.data("productid"),$section.data("rank"));
         });
-
         $giohangList.append($section);
     });
 }
 
-function loadCartPage() {
-    // trang giỏ hàng
-    if (document.getElementById("giohang") == null) return;
-    loadCartItem();
+// sanpham
+function loadSanPhamPage() 
+{ 
+    if (document.getElementById('sanpham') == null) return;
+
+    const goiButtons = document.querySelectorAll('.sanpham-goi');
+    goiButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productID = button.dataset.productid;
+            const rank = button.dataset.rank;
+            addToCart(productID, rank);
+        });
+    });
 }
 
 function addToCart(productID, rank) {
@@ -238,3 +302,129 @@ function addToCart(productID, rank) {
     loadCartPage();
 }
 
+function zoomImage(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+// Liên hệ
+function loadLienHePage() {
+    // Chỉ thực hiện khi form phản hồi có tồn tại
+    if (document.getElementById('lh-fb-form') == null) return;
+
+    document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
+        const inputName = document.getElementById("inputName").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        let errors = [];
+
+        if (!isValidLienHeName(inputName)) {
+            errors.push("Họ và tên không được chứa số và ký tự đặc biệt");
+        }
+
+        if (!isValidGmail(email)) {
+            errors.push("Email không hợp lệ");
+        }
+
+        if (!isValidPhone(phone)) {
+            errors.push("Số điện thoại không hợp lệ");
+        }
+
+        if (!isValidMessage(message)) {
+            errors.push("Nội dung phản hồi quá ngắn!");
+        }
+
+        if (errors.length > 0) {
+            alert("Vui lòng kiểm tra lại:\n- " + errors.join("\n- "));
+            e.preventDefault();
+        } else {
+            alert("Gửi phản hồi thành công!");
+        }
+    });
+}
+// Đăng Nhập
+function loadDangNhapPage() {
+    // Chỉ thực hiện khi form phản hồi có tồn tại
+    if (document.getElementById('dn-form') == null) return;
+
+    document.getElementById("dn-form").addEventListener("submit", function (e) {
+        const inputName = document.getElementById("inputName").value;
+        const pass = document.getElementById("password").value;
+
+        let errors = [];
+
+        if (inputName.length < 4) {
+            errors.push("Tên tài khoản phải có ít nhất 4 ký tự!");
+
+        } else if (!isValidName(inputName)) {
+            errors.push("Tên tài khoản không hợp lệ");
+        }
+
+        if (pass.length < 8) {
+            errors.push("Mật khẩu phải có ít nhất 8 ký tự!")
+        }
+        else if (!isValidPass(pass)) {
+            errors.push("Mật khẩu không hợp lệ");
+        }
+
+        if (errors.length > 0) {
+            alert("Vui lòng kiểm tra lại: \n- " + errors.join("\n- "));
+            e.preventDefault();
+        }
+
+        else {
+            alert("Đăng nhập thành công!");
+        }
+    });
+}
+// Đăng Ký
+function loadDangKyPage() {
+    if (document.getElementById('dk-form') == null) return;
+
+    document.getElementById("dk-form").addEventListener("submit", function (e) {
+        const inputName = document.getElementById("inputName").value;
+        const pass = document.getElementById("password").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+
+        let errors = [];
+
+        if (inputName.length < 4) {
+            errors.push("Tên tài khoản phải có ít nhất 4 ký tự!");
+
+        } else if (!isValidName(inputName)) {
+            errors.push("Tên tài khoản không được chứa ký tự đặt biệt hoặc khoảng trắng!");
+        }
+
+        if (!isValidGmail(email)) {
+            errors.push("Gmail không hợp lệ!");
+        }
+
+        if (!isValidPhone(phone)) {
+            errors.push("Số điện thoại không hợp lệ!");
+        }
+
+        if (pass.length < 8) {
+            errors.push("Mật khẩu phải có ít nhất 8 ký tự!")
+        }
+        else if (!isValidPass(pass)) {
+            errors.push("Mật khẩu không có khoảng trắng, phải chứa ít 1 ký tự in hoa, 1 ký tự đặt biệt và 1 chữ số!");
+        }
+
+        if (errors.length > 0) {
+            alert("Vui lòng kiểm tra lại: \n- " + errors.join("\n- "));
+            e.preventDefault();
+        }
+
+        else {
+            alert("Đăng ký thành công!");
+        }
+    });
+}

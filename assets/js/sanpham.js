@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     loadSanPhamPage();
 });
@@ -21,11 +19,9 @@ function loadSanPhamPage()
 function zoomImage(img) {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = lightbox.querySelector("img");
-
     lightboxImg.src = img.src;
     lightbox.style.display = "flex";
 }
-
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";

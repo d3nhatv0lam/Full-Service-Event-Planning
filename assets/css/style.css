@@ -2,8 +2,6 @@
 File gộp để sau này gom hết CSS vào 1 file này duy nhất
 Các thuộc tính chung nhất sẽ để ở đây trước. Vd: màu tổng thể, css cho header...
 */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Xài cái dưới mới đủ font weight hihi */
 

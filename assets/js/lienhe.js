@@ -1,4 +1,4 @@
-function isValidName(inputName) {
+function isValidLienHeName(inputName) {
     return /^[A-Za-zÀ-Ỹà-ỹ\s]+$/.test(inputName.trim());
 }
 
@@ -18,12 +18,14 @@ function isValidMessage(msg) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    loadLienHePage();
+});
+
+function loadLienHePage() {
     // Chỉ thực hiện khi form phản hồi có tồn tại
     if (document.getElementById('lh-fb-form') == null) return;
 
     document.getElementById("lh-fb-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-
         const inputName = document.getElementById("inputName").value;
         const email = document.getElementById("email").value;
         const phone = document.getElementById("phone").value;
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let errors = [];
 
-        if (!isValidName(inputName)) {
+        if (!isValidLienHeName(inputName)) {
             errors.push("Họ và tên không được chứa số và ký tự đặc biệt");
         }
 
@@ -49,8 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (errors.length > 0) {
             alert("Vui lòng kiểm tra lại:\n- " + errors.join("\n- "));
+            e.preventDefault();
         } else {
             alert("Gửi phản hồi thành công!");
         }
     });
-});
+}
